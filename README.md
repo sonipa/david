@@ -1,3 +1,3 @@
 # david
 
-This will be where the source code for my new site, David 3.0 will go. The current (2.1) site will be removed once this is ready.
+This (will be) the source for my site. The old one will be gone when this is ready, so get your last looks in: [davidmulhern.com](http://davidmulhern.com)
