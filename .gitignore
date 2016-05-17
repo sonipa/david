@@ -1,10 +1,8 @@
 # Tooling
-/node_modules/
-/typings/
-/dist/
+/.pub/
+/packages/
+/build/
 
 # Local Environment
 /.settings/
 /.project
-/.pub/
-/packages/
