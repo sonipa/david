@@ -2,6 +2,13 @@
 
 This (will be) the source for my site. The old one will be gone when this is ready, so get your last looks for the sort of broken version 2.1: [davidmulhern.com](http://davidmulhern.com)
 
+Decisions:
+
+* Dart
+* Angular2
+
+That's it so far.
+
 ### Instructions
 
 * `pub serve` to work in live mode

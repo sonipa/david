@@ -8,4 +8,4 @@ dependencies:
   browser: ^0.10.0
 transformers:
 - angular2:
-    entry_points: web/main.dart
+    entry_points: web/david.dart
