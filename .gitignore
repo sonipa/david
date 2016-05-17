@@ -6,3 +6,5 @@
 # Local Environment
 /.settings/
 /.project
+/.pub/
+/packages/
