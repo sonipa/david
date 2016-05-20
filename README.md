@@ -1,5 +1,7 @@
 # david
 
+> This project is a prototype/work in progress at this point
+
 This (will be) the source for my site. The old one will be gone when this is ready, so get your last looks for the sort of broken version 2.1: [davidmulhern.com](http://davidmulhern.com)
 
 Decisions:
