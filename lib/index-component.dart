@@ -2,5 +2,6 @@ import 'package:angular2/core.dart';
 
 @Component(
     selector: 'david-app',
-    template: 'David Mulhern')
+    templateUrl: 'package:david/index-component.html',
+    styleUrls: const ['package:david/index-component.css'])
 class IndexComponent {}
