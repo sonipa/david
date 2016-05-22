@@ -1,3 +1,5 @@
-* {
-   background:red; color:red;
+.stage {
+  color:#496494;
+  background:#E0DBCD;
+  border:blue 1px dashed;
 }
