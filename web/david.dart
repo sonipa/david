@@ -1,5 +1,6 @@
 import 'package:angular2/platform/browser.dart';
-import 'package:david/index-component.dart';
+import 'package:david/stage.dart';
+
 void main() {
-  bootstrap(IndexComponent);
+  bootstrap(StageComponent);
 }
