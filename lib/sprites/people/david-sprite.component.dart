@@ -6,4 +6,9 @@ import 'package:angular2/core.dart';
     styleUrls: const [
       'package:david/sprites/people/david-sprite.component.css'
     ])
-class DavidSpriteComponent {}
+class DavidSpriteComponent {
+  String clickMessage = '..';
+  onClickMe() {
+    clickMessage += '.. .. .. ..';
+  }
+}

@@ -6,4 +6,9 @@ import 'package:david/sprites/people/david-sprite.component.dart';
     directives: const [DavidSpriteComponent],
     templateUrl: 'package:david/stage.component.html',
     styleUrls: const ['package:david/stage.component.css'])
-class StageComponent {}
+class StageComponent {
+  String clickMessage = '++';
+  doSomething($event) {
+    clickMessage += ' ++';
+  }
+}
