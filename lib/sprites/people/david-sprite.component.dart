@@ -7,8 +7,8 @@ import 'package:angular2/core.dart';
       'package:david/sprites/people/david-sprite.component.css'
     ])
 class DavidSpriteComponent {
-  String clickMessage = '..';
+  Integer leftPosition = 200;
   onClickMe() {
-    clickMessage += '.. .. .. ..';
+    leftPosition += 20;
   }
 }
