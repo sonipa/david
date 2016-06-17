@@ -1,9 +1,8 @@
-# Tooling
-/.pub/
-/packages/
-/build/
-
-# Local Environment
-/.settings/
-/.project
-/.packages
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+themes/
+.deploy*/
