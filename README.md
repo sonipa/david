@@ -13,6 +13,7 @@ That's it so far.
 
 ### Instructions
 
+* `pub install` to get started
 * `pub serve` to work in live mode
 * `pub build` to create static output
 
