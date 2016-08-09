@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 Thumbs.db
 db.json
@@ -7,3 +8,14 @@ public/
 themes/indigo/
 themes/landscape/
 .deploy*/
+=======
+# Tooling
+/.pub/
+/packages/
+/build/
+
+# Local Environment
+/.settings/
+/.project
+/.packages
+>>>>>>> parent of fa69b7b... Hexo
