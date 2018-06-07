@@ -1,1 +1,113 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700);
+
+html {
+font-size:16px;
+}
+
+body {
+font-family: 'Lora', serif;
+font-size: 1rem;
+font-weight:400;
+margin:0px;
+background:#fff;
+}
+
+b {
+font-weight:700;
+}
+
+h1,
+h2,
+h3 {
+font-weight:700;
+}
+
+h1 {
+font-size:2.6rem;
+line-height:2.8rem;
+margin:5rem 0 2rem 0;
+font-style: italic;
+}
+h2 {
+font-size:1.6rem;
+line-height:1.9rem;
+margin:3.5rem 0 1.5rem 0;
+}
+h3 {
+font-size:1.3rem;
+line-height:1.5rem;
+margin:3rem 0 1.3rem 0;
+}
+
+p {
+font-size:1.2rem;
+line-height:1.9rem;
+margin:1rem 0;
+}
+blockquote {
+font-size:1.1rem;
+line-height:1.9rem;
+margin:2rem 0.5rem 2rem 2.5rem;
+padding:1rem;
+padding-left: 2.5rem;
+border-left:#ccc 0.3rem solid;
+font-style: italic;
+}
+
+input {
+font-family: 'Lora', serif;
+font-size: 1.4rem;
+font-weight:400;
+text-align: center;
+border:none;
+border-bottom: 4px solid #ccc;
+}
+.example_age {
+width:40px;
+}
+.example_name {
+width:140px;
+}
+
+.container {
+max-width: 40rem;
+min-width: 25rem;
+margin: 1rem 0 1rem 13vw;
+padding: 0 6rem;
+padding-bottom:3rem;
+overflow:hidden;
+background:blue;
+background:#fff;
+}
+.ver {
+position: fixed;
+top: 0;
+padding:1rem;
+opacity:0.5;
+font-size:.9rem;
+font-style: italic;
+overflow:hidden;
+}
+.menu {
+position: fixed;
+top: 80px;
+width:7rem;
+padding-left:1rem;
+font-size:1.3rem;
+line-height:2rem;
+font-weight:700;
+}
+  .menu a {
+  color:#000;
+  text-decoration: none;
+  }
+  .menu a:hover {
+  text-decoration: underline;
+  }
+  .menu a.this,
+  .menu a:hover.this {
+  color:#ccc;
+  font-style: italic;
+  }
