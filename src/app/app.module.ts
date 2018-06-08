@@ -1,12 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatBottomSheetModule, MatButtonModule, MatNativeDateModule,
+  MatListModule, MatDividerModule, MatTooltipModule, MatGridListModule } from '@angular/material';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 
+// Routes
 import { RouterModule, Routes } from '@angular/router';
 import { NowComponent } from './destinations/now/now.component';
 import { TimelineComponent } from './destinations/timeline/timeline.component';
 import { LostComponent } from './destinations/lost/lost.component';
+
+// Notes
+import { HypercardComponent } from './notes/hypercard/hypercard.component';
+import { BBSComponent } from './notes/bbs/bbs.component';
+import { ChangeLogComponent } from './notes/change-log/change-log.component';
+import { FrameworksComponent } from './notes/frameworks/frameworks.component';
 
 const appRoutes: Routes = [
   { path: 'now', component: NowComponent },
@@ -23,14 +32,31 @@ const appRoutes: Routes = [
     AppComponent,
     NowComponent,
     TimelineComponent,
-    LostComponent
+    LostComponent,
+    HypercardComponent,
+    BBSComponent,
+    ChangeLogComponent,
+    FrameworksComponent
+  ],
+  entryComponents: [
+    HypercardComponent,
+    BBSComponent,
+    ChangeLogComponent,
+    FrameworksComponent
   ],
   imports: [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false }
     ),
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatListModule,
+    MatDividerModule,
+    MatTooltipModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
+import { ChangeLogComponent } from './../../notes/change-log/change-log.component';
 
 @Component({
   selector: 'app-now',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./now.component.scss']
 })
 export class NowComponent {
-  title = 'now';
+  constructor(private bottomSheet: MatBottomSheet) {}
+  openChangeLog(): void {
+    this.bottomSheet.open(ChangeLogComponent);
+  }
 }
