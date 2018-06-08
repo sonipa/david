@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatBottomSheetModule, MatButtonModule, MatNativeDateModule,
+import { MatBottomSheetModule, MatButtonModule, MatExpansionModule, MatIconModule,
   MatListModule, MatDividerModule, MatTooltipModule, MatGridListModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 // Routes
 import { RouterModule, Routes } from '@angular/router';
 import { NowComponent } from './destinations/now/now.component';
-import { TimelineComponent } from './destinations/timeline/timeline.component';
+import { ChangelogComponent } from './destinations/changelog/changelog.component';
+import { FeaturesComponent } from './destinations/features/features.component';
 import { LostComponent } from './destinations/lost/lost.component';
 
 // Notes
@@ -19,7 +20,8 @@ import { FrameworksComponent } from './notes/frameworks/frameworks.component';
 
 const appRoutes: Routes = [
   { path: 'now', component: NowComponent },
-  { path: 'timeline', component: TimelineComponent },
+  { path: 'changelog', component: ChangelogComponent },
+  { path: 'features', component: FeaturesComponent },
   { path: '',
     redirectTo: '/now',
     pathMatch: 'full'
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NowComponent,
-    TimelineComponent,
+    ChangelogComponent,
+    FeaturesComponent,
     LostComponent,
     HypercardComponent,
     BBSComponent,
@@ -53,6 +56,8 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatBottomSheetModule,
     MatButtonModule,
+    MatExpansionModule,
+    MatIconModule,
     MatListModule,
     MatDividerModule,
     MatTooltipModule,

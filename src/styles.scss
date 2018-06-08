@@ -2,6 +2,13 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700);
 
+.material-icons {
+vertical-align: text-bottom;
+}
+.mat-expansion-panel-header .material-icons {
+font-size:20px;
+}
+
 html {
 font-size:16px;
 }
@@ -38,6 +45,12 @@ u:hover,
 a:hover {
 color: #0645ad;
 text-decoration: underline;
+}
+u {
+  color:#ad2e06;
+}
+u:hover {
+  color:#ad2e06;
 }
 
 b {

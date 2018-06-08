@@ -5,10 +5,10 @@ import { BBSComponent } from './../../notes/bbs/bbs.component';
 import { FrameworksComponent } from './../../notes/frameworks/frameworks.component';
 
 @Component({
-  selector: 'app-now',
-  templateUrl: './timeline.component.html'
+  selector: 'app-changelog',
+  templateUrl: './changelog.component.html'
 })
-export class TimelineComponent {
+export class ChangelogComponent {
   constructor(private bottomSheet: MatBottomSheet) {}
   openHypercard(): void {
     this.bottomSheet.open(HypercardComponent);
