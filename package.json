@@ -24,6 +24,7 @@
     "@angular/router": "^6.0.3",
     "angular-cli": "^1.0.0-beta.28.3",
     "core-js": "^2.5.4",
+    "devicon": "^2.0.0",
     "hammerjs": "^2.0.8",
     "rxjs": "^6.2.0",
     "rxjs-compat": "^6.2.0",

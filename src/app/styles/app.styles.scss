@@ -1,4 +1,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~devicon/devicon.css";
+@import "~devicon/devicon-colors.css";
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700);
 
 @import './variables';
@@ -44,11 +46,13 @@ color:$light-text-color;
 color:$light-offset-color;
 }
 .mat-grid-tile {
-color:$light-offset-color;
 background:darken($light-background-color,5%);
 }
 .overlay-close, .sun {
 color:$light-text-color;
+}
+.hidden_not_in_dark {
+  display:none;
 }
 
 // Cloudy Theme (Default)
@@ -88,7 +92,6 @@ color:$light-text-color;
   color:$cloudy-offset-color;
   }
   .mat-grid-tile {
-  color:$cloudy-offset-color;
   background:darken($cloudy-background-color,5%);
   }
   .overlay-close, .sun {
@@ -103,6 +106,10 @@ color:$light-text-color;
    .mat-expansion-panel {
     background-color:#fff;
    }
+  }
+
+  .hidden_not_in_dark {
+    display:none;
   }
 }
 
@@ -145,7 +152,6 @@ color:$light-text-color;
   color:$dark-offset-color;
   }
   .mat-grid-tile {
-  color:$dark-offset-color;
   background:darken($dark-background-color,5%);
   }
   .overlay-close, .sun {
@@ -162,13 +168,38 @@ color:$light-text-color;
   .mat-expansion-indicator::after {
     color:darken($dark-text-color,50%);
   }
-
+  .hidden_in_dark {
+    display: none;
+  }
+  .hidden_not_in_dark {
+    display: block;
+  }
 }
 
-.mat-grid-tile {
-font-size:.8em;
-text-indent:-9999px;
+
+
+
+
+
+
+
+
+
+.level-up i {
+font-size:8em;
+padding-right:6px;
+opacity: 0.1;
 }
+
+.lu-number {
+
+  font-weight: 700;
+}
+
+
+
+
+
 
 
 
@@ -350,6 +381,7 @@ padding-left:14px;
   .menu a:hover.this {
   text-decoration: none;
   cursor: default;
+  font-style: italic;
   }
 
 // Media Items
@@ -384,3 +416,13 @@ top:18px;
 right:14px;
 cursor: pointer;
 }
+
+
+.no-select {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+
+

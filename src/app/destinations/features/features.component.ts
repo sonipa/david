@@ -21,9 +21,9 @@ export class FeaturesComponent {
     this.bottomSheet.open(FrameworksComponent);
   }
   showOverlay(targetZ: string, targetL: string, targetME: string) {
-    this.parentChildService.targetx = targetZ;
-    this.parentChildService.targety = targetL;
-    this.parentChildService.targetj = targetME;
+    this.parentChildService.targetTemplateName = targetZ;
+    this.parentChildService.targetOverlayTitle = targetL;
+    this.parentChildService.targetDetails = targetME;
     this.parentChildService.publish('call-parent');
   }
 }

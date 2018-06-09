@@ -14,6 +14,8 @@ import { NowComponent } from './destinations/now/now.component';
 import { ChangelogComponent } from './destinations/changelog/changelog.component';
 import { FeaturesComponent } from './destinations/features/features.component';
 import { LostComponent } from './destinations/lost/lost.component';
+import { ThoughtsComponent } from './destinations/thoughts/thoughts.component';
+import { ProjectsComponent } from './destinations/projects/projects.component';
 
 // Notes
 import { HypercardComponent } from './notes/hypercard/hypercard.component';
@@ -25,6 +27,8 @@ const appRoutes: Routes = [
   { path: 'now', component: NowComponent },
   { path: 'changelog', component: ChangelogComponent },
   { path: 'features', component: FeaturesComponent },
+  { path: 'thoughts', component: ThoughtsComponent },
+  { path: 'projects', component: ProjectsComponent },
   { path: '',
     redirectTo: '/now',
     pathMatch: 'full'
@@ -41,6 +45,8 @@ const appRoutes: Routes = [
     LostComponent,
     HypercardComponent,
     BBSComponent,
+    ThoughtsComponent,
+    ProjectsComponent,
     ChangeLogComponent,
     FrameworksComponent
   ],

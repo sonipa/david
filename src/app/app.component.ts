@@ -14,13 +14,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
   @ViewChild('sidenav') sidenav: MatSidenav;
   subscription;
-  truthiness = '';
+  templateName = '';
   overlayTitle = '';
   overlayDetails = '';
-  isDark = false;
+  isDark = true;
   isCloudy = false;
-  isSunny = true;
-  currentWeather = 'sunny';
+  isSunny = false;
+  currentWeather = 'dark';
 
   constructor(private location: LocationStrategy, private parentChildService: ParentChildService) {
     this.location.onPopState(() => {
@@ -32,22 +32,24 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   toggleDark() {
     const body = document.getElementsByTagName('body')[0];
+
+    // Weather control
     if ( this.isDark ) {
-      this.currentWeather = 'cloudy';
-      body.classList.toggle('dark');
-      body.classList.toggle('cloudy');
-      this.isDark = false;
-      this.isCloudy = true;
-    } else if ( this.isCloudy ) {
       this.currentWeather = 'sunny';
-      body.classList.toggle('cloudy');
-      this.isCloudy = false;
+      body.classList.toggle('dark');
+      this.isDark = false;
       this.isSunny = true;
     } else if ( this.isSunny ) {
-      this.currentWeather = 'dark';
-      body.classList.toggle('dark');
-      this.isDark = true;
+      this.currentWeather = 'cloudy';
+      body.classList.toggle('cloudy');
+      this.isCloudy = true;
       this.isSunny = false;
+    } else if ( this.isCloudy ) {
+      this.currentWeather = 'dark';
+      body.classList.toggle('cloudy');
+      body.classList.toggle('dark');
+      this.isCloudy = false;
+      this.isDark = true;
     }
   }
   openOverlay() {
@@ -66,9 +68,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
   parentFunction() {
-    this.truthiness = this.parentChildService.targetx;
-    this.overlayTitle = this.parentChildService.targety;
-    this.overlayDetails = this.parentChildService.targetj;
+    this.templateName = this.parentChildService.targetTemplateName;
+    this.overlayTitle = this.parentChildService.targetOverlayTitle;
+    this.overlayDetails = this.parentChildService.targetDetails;
     this.sidenav.open();
   }
 }
