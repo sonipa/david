@@ -42,7 +42,6 @@ color:$light-text-color;
 }
 .menu a.this, .menu a:hover.this {
 color:$light-offset-color;
-border-left:4px $light-offset-color solid;
 }
 .mat-grid-tile {
 color:$light-offset-color;
@@ -50,6 +49,61 @@ background:darken($light-background-color,5%);
 }
 .overlay-close, .sun {
 color:$light-text-color;
+}
+
+// Cloudy Theme (Default)
+// *********************************************************************************
+
+.cloudy {
+  body, .ds, .mat-drawer-container, .mat-drawer, .container,
+  .mat-bottom-sheet-container {
+  color:$cloudy-text-color;
+  background-color:$cloudy-background-color;
+  }
+  blockquote {
+  border-left:$cloudy-offset-color 0.3rem solid;
+  }
+  a {
+  color: $cloudy-link-color;
+    &:hover {
+    color:darken($cloudy-link-color,10%);
+    }
+  }
+  u {
+  color:$cloudy-link-note-color;
+    &:hover {
+    color: darken($cloudy-link-note-color,10%);
+    }
+  }
+  b {
+  color:$cloudy-bold-color;
+  }
+  .ver a, .ver a:hover {
+  color:$cloudy-offset-color;
+  }
+  .menu a, .menu a:hover {
+  color:$cloudy-text-color;
+  }
+  .menu a.this, .menu a:hover.this {
+  color:$cloudy-offset-color;
+  }
+  .mat-grid-tile {
+  color:$cloudy-offset-color;
+  background:darken($cloudy-background-color,5%);
+  }
+  .overlay-close, .sun {
+  color:$cloudy-text-color;
+  }
+
+
+
+  .mat-expansion-panel {
+    color:$cloudy-text-color;
+   background-color:lighten($cloudy-background-color,4%);
+   .mat-expansion-panel {
+    background-color:#fff;
+   }
+  }
 }
 
 // Dark Theme
@@ -89,7 +143,6 @@ color:$light-text-color;
   }
   .menu a.this, .menu a:hover.this {
   color:$dark-offset-color;
-  border-left:4px $dark-offset-color solid;
   }
   .mat-grid-tile {
   color:$dark-offset-color;
@@ -140,11 +193,22 @@ margin:0px;
 .container {
 max-width: 40rem;
 min-width: 25rem;
-margin: 1rem 0 1rem 13vw;
+margin: 0rem 0 0rem 13vw;
 padding: 0 6rem;
-padding-bottom:3rem;
 overflow:hidden;
 }
+.container-full {
+max-width: 70rem;
+min-width: 25rem;
+margin: 0rem 0 0rem 13vw;
+padding-left: 5rem;
+padding-right:36px;
+}
+.page-end {
+height:180px;
+width:4px;
+}
+
 // various material overrides
 
 .mat-bottom-sheet-container-medium .ds,
@@ -260,8 +324,8 @@ cursor: default;
 .sun {
 cursor:pointer;
 position: fixed;
-top: 20px;
-right: 30px;
+top: 10px;
+right: 25px;
 }
 
 // Side Navigation
@@ -273,10 +337,10 @@ width:7rem;
 font-size:1.3rem;
 line-height:2.4rem;
 font-weight:700;
+padding-left:14px;
 }
   .menu a {
   text-decoration: none;
-  padding-left:14px;
   }
   .menu a:hover {
   text-decoration: underline;
@@ -286,7 +350,6 @@ font-weight:700;
   .menu a:hover.this {
   text-decoration: none;
   cursor: default;
-  padding-left:10px;
   }
 
 // Media Items

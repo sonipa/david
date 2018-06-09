@@ -17,7 +17,10 @@ export class AppComponent implements OnInit, OnDestroy {
   truthiness = '';
   overlayTitle = '';
   overlayDetails = '';
-  isDark = true;
+  isDark = false;
+  isCloudy = false;
+  isSunny = true;
+  currentWeather = 'sunny';
 
   constructor(private location: LocationStrategy, private parentChildService: ParentChildService) {
     this.location.onPopState(() => {
@@ -29,14 +32,24 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   toggleDark() {
     const body = document.getElementsByTagName('body')[0];
-    body.classList.toggle('dark');
-    if ( !this.isDark ) {
-      this.isDark = true;
-    } else {
+    if ( this.isDark ) {
+      this.currentWeather = 'cloudy';
+      body.classList.toggle('dark');
+      body.classList.toggle('cloudy');
       this.isDark = false;
+      this.isCloudy = true;
+    } else if ( this.isCloudy ) {
+      this.currentWeather = 'sunny';
+      body.classList.toggle('cloudy');
+      this.isCloudy = false;
+      this.isSunny = true;
+    } else if ( this.isSunny ) {
+      this.currentWeather = 'dark';
+      body.classList.toggle('dark');
+      this.isDark = true;
+      this.isSunny = false;
     }
   }
-
   openOverlay() {
     this.sidenav.open();
   }
