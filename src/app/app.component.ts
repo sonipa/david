@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
   truthiness = '';
   overlayTitle = '';
   overlayDetails = '';
-  isDark = false;
+  isDark = true;
 
   constructor(private location: LocationStrategy, private parentChildService: ParentChildService) {
     this.location.onPopState(() => {

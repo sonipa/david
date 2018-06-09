@@ -3,9 +3,7 @@
 <mat-grid-list cols="1" rowHeight="3:1">
   <mat-grid-tile (click)="showOverlay('Versions Larger','Versions', 'Some of the')" class="view-larger-link" matTooltip="View Larger"  [matTooltipPosition]="'before'">versions illustration</mat-grid-tile>
 </mat-grid-list>
-<p>I like to think of age as our version number. We start at version 0.0.1 and eventually got to now. I think it would be fun to have a <u (click)="openChangeLog();" matTooltip="What's a changelog?" [matTooltipPosition]="'below'">changelog</u> rather than rely on memory.</p>
+<p>I like to think of age as our version number. We start at version 0.0.1 and eventually got to <i>now</i>. I think it would be fun to have a <u (click)="openChangeLog();" matTooltip="What's a changelog?" [matTooltipPosition]="'below'">changelog</u> rather than rely on memory.</p>
 <blockquote>
   Do not trust your memory; it is a net full of holes; the most beautiful prizes slip through it. - Georges Duhamel
 </blockquote>
-<h3>What now?</h3>
-<p>It depends on why you're here. You can check out a log of <a [routerLink]="'/changelog'">past versions</a>, see <a [routerLink]="'/features'">features</a> I have now, read my <a [routerLink]="'/thoughts'">thoughts</a> on various topics or browse <a [routerLink]="'/projects'">projects</a> I've worked on. There are also <a [routerLink]="'/about'">contact details</a>.</p>

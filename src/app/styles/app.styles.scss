@@ -47,7 +47,6 @@ border-left:4px $light-offset-color solid;
 .mat-grid-tile {
 color:$light-offset-color;
 background:darken($light-background-color,5%);
-box-shadow: inset 0px 0px 32px 5px darken($light-background-color,8%);
 }
 .overlay-close, .sun {
 color:$light-text-color;
@@ -95,7 +94,6 @@ color:$light-text-color;
   .mat-grid-tile {
   color:$dark-offset-color;
   background:darken($dark-background-color,5%);
-  box-shadow: inset 0px 0px 32px 5px darken($dark-background-color,8%);
   }
   .overlay-close, .sun {
   color:$dark-text-color;
@@ -103,9 +101,9 @@ color:$light-text-color;
 
   .mat-expansion-panel {
     color:$dark-text-color;
-   background-color:lighten($dark-background-color,8%);
+   background-color:lighten($dark-background-color,4%);
    .mat-expansion-panel {
-    background-color:lighten($dark-background-color,16%);
+    background-color:lighten($dark-background-color,9%);
    }
   }
   .mat-expansion-indicator::after {
