@@ -1,23 +1,23 @@
 <h1>Features</h1>
 <p>Previous versions of me added features like drawing and writing. The idea of the page being blank wasn't there until I got into design.</p>
-<mat-grid-list cols="3" rowHeight="1.1:1">
-  <mat-grid-tile>drawing</mat-grid-tile>
-  <mat-grid-tile>drawing</mat-grid-tile>
-  <mat-grid-tile>drawing</mat-grid-tile>
+<mat-grid-list cols="3" rowHeight="16:12">
+  <mat-grid-tile (click)="showOverlay('A drawing here', 'Early Drawings', 'Selections from the first twelve years of drawing.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'before'">drawing</mat-grid-tile>
+  <mat-grid-tile (click)="showOverlay('A drawing here', 'Later Drawings', 'Selections from sixteen years onward.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'above'">drawing</mat-grid-tile>
+  <mat-grid-tile (click)="showOverlay('A drawing here', 'More Recent Drawings', 'Selections from the past decade or so.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'after'">drawing</mat-grid-tile>
 </mat-grid-list>
 <p>Once <u (click)="openHypercard();" matTooltip="What's Hypercard?"  [matTooltipPosition]="'above'">Hypercard</u> came out, I began to focus on development. Before the web, I made a <u (click)="openBBS();" matTooltip="What's a BBS?" [matTooltipPosition]="'below'">Wildcat BBS</u> and became a sysop.</p>
 <p>These days, I use <u (click)="openFrameworks();" matTooltip="Frameworks? Libraries?" [matTooltipPosition]="'below'">frameworks and libraries</u> to build things. I also like to use cameras. Using cameras is one of my favorite hobbies.</p>
 <mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>cameras</mat-grid-tile>
-  <mat-grid-tile>photos</mat-grid-tile>
-  <mat-grid-tile>video</mat-grid-tile>
-  <mat-grid-tile>photos</mat-grid-tile>
+  <mat-grid-tile (click)="showOverlay('Some cameras', 'Cameras', 'I really like cameras. Here are some of the ones I use.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'before'">cameras</mat-grid-tile>
+  <mat-grid-tile (click)="showOverlay('Some photos', 'Film Cameras', 'Photos I\'ve taken with film cameras.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'after'">photos</mat-grid-tile>
+  <mat-grid-tile (click)="showOverlay('Some videos', 'Video Cameras', 'Frame stills from videos I shot. Real video captures coming soon.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'before'">video</mat-grid-tile>
+  <mat-grid-tile (click)="showOverlay('Some photos', 'Digital Cameras', 'Photos I\'ve taken with digital cameras.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'after'">photos</mat-grid-tile>
 </mat-grid-list>
 <h2>Feature Forecast</h2>
 <p>I am learning about working with real materials like wood and stone. I have not acquired this feature yet, but I plan to in an upcoming version.</p>
 <p>When I was a baby in Alaska, I was given a carved wooden totem pole created by one of my parents' friends. I still have it now.</p>
 <mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>carved</mat-grid-tile>
-  <mat-grid-tile>thing</mat-grid-tile>
+  <mat-grid-tile (click)="showOverlay('Carved','Walking Stick','My parents called the creator of this &ldquo;Grandpa George&rdquo;.<br>I got it in Alaska when I was born.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'before'">carved</mat-grid-tile>
+  <mat-grid-tile (click)="showOverlay('Carved Thing 2','Real Items','Some of my attempts to do woodcarving and 3D printing.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'after'">thing</mat-grid-tile>
 </mat-grid-list>
 <p>I want to create things that will stand the test of time. Wood and stone seems like a good place to start.</p>

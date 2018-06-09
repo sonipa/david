@@ -12,6 +12,9 @@ font-size:20px;
 html {
 font-size:16px;
 }
+.mat-drawer-container {
+background-color:#fff;
+}
 
 body,
 .ds {
@@ -25,11 +28,11 @@ background:#fff;
 background:transparent;
 }
 .mat-bottom-sheet-container-medium .ds {
-max-width: 44rem;
+max-width: 40rem;
 }
 .mat-bottom-sheet-container-large .ds,
 .mat-bottom-sheet-container-xlarge .ds {
-max-width: 35rem;
+max-width: 33rem;
 }
 .mat-list-text {
   text-align: center;
@@ -175,11 +178,36 @@ font-weight:700;
   }
 
   .mat-grid-tile {
-  color:#FFFFFF;
-  background: #9E9E9E;
-  opacity: 0.5;
-  cursor: pointer;
+  color:#999;
+  background: #f2f2f2;
   }
-  .mat-grid-tile:hover {
-  opacity: 0.7;
+
+
+.measureman {
+  width:82vw; height:1px;
+}
+
+  .overlay-header {
+  padding:14px 0px 9px 23px;
+  overflow:hidden;
+  border-bottom:8px;
+  }
+    .overlay-title {
+    font-size:1.6rem;
+    font-weight: 700;
+    }
+    .overlay-details {
+    padding:4px 0px;
+    }
+    .overlay-close {
+      font-size:1rem;
+      position: absolute;
+      top:18px;
+      right:14px;
+      color:#9E9E9E;
+      cursor: pointer;
+    }
+
+  .view-larger-link {
+    cursor:pointer;
   }

@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBottomSheetModule, MatButtonModule, MatExpansionModule, MatIconModule,
-  MatListModule, MatDividerModule, MatTooltipModule, MatGridListModule } from '@angular/material';
+  MatListModule, MatDividerModule, MatTooltipModule, MatGridListModule, MatSidenavModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+
+// Services
+import { ParentChildService } from './services/parent-child.service';
 
 // Routes
 import { RouterModule, Routes } from '@angular/router';
@@ -61,9 +64,10 @@ const appRoutes: Routes = [
     MatListModule,
     MatDividerModule,
     MatTooltipModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSidenavModule
   ],
-  providers: [],
+  providers: [ParentChildService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

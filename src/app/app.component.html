@@ -1,12 +1,28 @@
-<div class="ver">v3</div>
-<div class="menu">
-  <a [routerLink]="['/now']" routerLinkActive="this">Now</a><br>
-  <a [routerLink]="['/changelog']" routerLinkActive="this">Changelog</a><br>
-  <a [routerLink]="['/features']" routerLinkActive="this">Features</a><br>
-  <a [routerLink]="['/projects']" routerLinkActive="this">Projects</a><br>
-  <a [routerLink]="['/thoughts']" routerLinkActive="this">Thoughts</a><br>
-  <a [routerLink]="['/about']" routerLinkActive="this">About</a>
-</div>
-<section class="container">
-  <router-outlet></router-outlet>
-</section>
+<mat-sidenav-container class="example-container" (backdropClick)="closeOverlay()">
+  <mat-sidenav #sidenav (keydown.escape)="closeOverlay()" (click)="closeOverlay()">
+
+    <div class="overlay-header">
+        <div class="overlay-title">{{titleness}}</div>
+        <div class="overlay-details" [innerHTML]="shmeetails"></div>
+        <div class="overlay-close" matTooltip="Close Panel"  [matTooltipPosition]="'before'"><mat-icon>close</mat-icon></div>
+    </div>
+    <div class="measureman"></div>
+    <mat-grid-list cols="1" rowHeight="16:9">
+      <mat-grid-tile>{{truthiness}}</mat-grid-tile>
+    </mat-grid-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="ver">v3</div>
+    <div class="menu">
+      <a [routerLink]="['/now']" routerLinkActive="this">Now</a><br>
+      <a [routerLink]="['/changelog']" routerLinkActive="this">Changelog</a><br>
+      <a [routerLink]="['/features']" routerLinkActive="this">Features</a><br>
+      <a [routerLink]="['/projects']" routerLinkActive="this">Projects</a><br>
+      <a [routerLink]="['/thoughts']" routerLinkActive="this">Thoughts</a><br>
+      <a [routerLink]="['/about']" routerLinkActive="this">About</a>
+    </div>
+    <section class="container">
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>
