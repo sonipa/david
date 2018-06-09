@@ -1,9 +1,9 @@
-<mat-sidenav-container class="example-container" (backdropClick)="closeOverlay()">
-  <mat-sidenav #sidenav (keydown.escape)="closeOverlay()" (click)="closeOverlay()">
 
+<mat-sidenav-container class="the-container" (backdropClick)="closeOverlay()">
+  <mat-sidenav #sidenav (keydown.escape)="closeOverlay()" (click)="closeOverlay()">
     <div class="overlay-header">
-        <div class="overlay-title">{{titleness}}</div>
-        <div class="overlay-details" [innerHTML]="shmeetails"></div>
+        <div class="overlay-title">{{overlayTitle}}</div>
+        <div class="overlay-details" [innerHTML]="overlayDetails"></div>
         <div class="overlay-close" matTooltip="Close Panel"  [matTooltipPosition]="'before'"><mat-icon>close</mat-icon></div>
     </div>
     <div class="measureman"></div>
@@ -12,7 +12,11 @@
     </mat-grid-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="ver">v3</div>
+    <div class="sun" (click)="toggleDark()">
+      <mat-icon *ngIf="!isDark; else elseBlock;">wb_sunny</mat-icon>
+      <ng-template #elseBlock><mat-icon>brightness_3</mat-icon></ng-template>
+    </div>
+    <div class="ver"><a [routerLink]="['/changelog']" routerLinkActive="this">v3</a></div>
     <div class="menu">
       <a [routerLink]="['/now']" routerLinkActive="this">Now</a><br>
       <a [routerLink]="['/changelog']" routerLinkActive="this">Changelog</a><br>

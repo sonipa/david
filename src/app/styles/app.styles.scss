@@ -1,0 +1,325 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700);
+
+@import './variables';
+
+// *********************************************************************************
+//
+// COLORS ONLY
+// *********************************************************************************
+
+// Light Theme (Default)
+// *********************************************************************************
+
+body, .ds, .mat-drawer-container, .mat-drawer, .container,
+.mat-bottom-sheet-container {
+color:$light-text-color;
+background-color:$light-background-color;
+}
+blockquote {
+border-left:$light-offset-color 0.3rem solid;
+}
+a {
+color: $light-link-color;
+  &:hover {
+  color:darken($light-link-color,10%);
+  }
+}
+u {
+color:$light-link-note-color;
+  &:hover {
+  color: darken($light-link-note-color,10%);
+  }
+}
+b {
+color:$light-bold-color;
+}
+.ver a, .ver a:hover {
+color:$light-offset-color;
+}
+.menu a, .menu a:hover {
+color:$light-text-color;
+}
+.menu a.this, .menu a:hover.this {
+color:$light-offset-color;
+border-left:4px $light-offset-color solid;
+}
+.mat-grid-tile {
+color:$light-offset-color;
+background:darken($light-background-color,5%);
+box-shadow: inset 0px 0px 32px 5px darken($light-background-color,8%);
+}
+.overlay-close, .sun {
+color:$light-text-color;
+}
+
+// Dark Theme
+// *********************************************************************************
+
+.dark {
+  body, .ds, .mat-drawer-container, .mat-drawer, .container,
+  .mat-bottom-sheet-container, .mat-list-text {
+  color:$dark-text-color;
+  background-color:$dark-background-color;
+  }
+
+  blockquote {
+  border-left:$dark-offset-color 0.3rem solid;
+  }
+  a {
+  color: $dark-link-color;
+    &:hover {
+    color:darken($dark-link-color,10%);
+    }
+  }
+  u {
+  color:$dark-link-note-color;
+    &:hover {
+    color: darken($dark-link-note-color,10%);
+    }
+  }
+  b {
+  color:$dark-bold-color;
+  }
+
+  .ver a, .ver a:hover {
+  color:$dark-offset-color;
+  }
+  .menu a, .menu a:hover {
+  color:$dark-text-color;
+  }
+  .menu a.this, .menu a:hover.this {
+  color:$dark-offset-color;
+  border-left:4px $dark-offset-color solid;
+  }
+  .mat-grid-tile {
+  color:$dark-offset-color;
+  background:darken($dark-background-color,5%);
+  box-shadow: inset 0px 0px 32px 5px darken($dark-background-color,8%);
+  }
+  .overlay-close, .sun {
+  color:$dark-text-color;
+  }
+
+  .mat-expansion-panel {
+    color:$dark-text-color;
+   background-color:lighten($dark-background-color,8%);
+   .mat-expansion-panel {
+    background-color:lighten($dark-background-color,16%);
+   }
+  }
+  .mat-expansion-indicator::after {
+    color:darken($dark-text-color,50%);
+  }
+
+}
+
+.mat-grid-tile {
+font-size:.8em;
+text-indent:-9999px;
+}
+
+
+
+// Body Text
+// --------------------------------------------------------------------------------------------
+// These styles apply to most of the text a user sees
+// ds, dp, dh1 (etc) override Material. They just love Roboto.
+
+html {
+font-size:16px;
+}
+body,
+.ds {
+font-family: 'Lora', serif;
+font-size: 1rem;
+font-weight:400;
+margin:0px;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+// this sets the width to make sure text is readable
+.container {
+max-width: 40rem;
+min-width: 25rem;
+margin: 1rem 0 1rem 13vw;
+padding: 0 6rem;
+padding-bottom:3rem;
+overflow:hidden;
+}
+// various material overrides
+
+.mat-bottom-sheet-container-medium .ds,
+.mat-bottom-sheet-container-large .ds,
+.mat-bottom-sheet-container-xlarge .ds {
+max-width: 33rem;
+}
+.mat-list-text {
+text-align: center;
+}
+.material-icons {
+vertical-align: text-bottom;
+}
+.mat-expansion-panel-header .material-icons {
+font-size:20px;
+}
+.mat-bottom-sheet-container {
+padding:0px !important;
+}
+
+// --------------------------------------------------------------------------------------------
+// Element Type Font Styles
+// --------------------------------------------------------------------------------------------
+
+h1,
+.dh1,
+h2,
+h3 {
+font-weight:700;
+}
+h1,
+.dh1 {
+font-size:2.6rem;
+line-height:2.8rem;
+margin:2rem 0 2rem 0;
+font-style: italic;
+}
+.dh1 {
+padding:20px 20px 0px 20px;
+margin: 0;
+line-height:2.8rem;
+}
+h2 {
+font-size:1.6rem;
+line-height:1.9rem;
+margin:3.5rem 0 1.5rem 0;
+}
+h3 {
+font-size:1.3rem;
+line-height:1.5rem;
+margin:3rem 0 1.3rem 0;
+}
+
+b {
+font-weight:700;
+}
+p,
+.dp {
+font-size:1.2rem;
+line-height:1.9rem;
+margin:1rem 0;
+}
+.dp {
+padding: 8px 20px 8px 20px;
+}
+blockquote {
+font-size:1.1rem;
+line-height:1.9rem;
+margin:2rem 0.5rem 2rem 2.5rem;
+padding:1rem;
+padding-left: 2.5rem;
+font-style: italic;
+}
+
+// Links
+a {
+cursor: pointer;
+text-decoration: none;
+border-radius: 2px;
+}
+a:hover {
+text-decoration: underline;
+}
+u {
+cursor: pointer;
+text-decoration: none;
+border-radius: 2px;
+}
+u:hover {
+text-decoration: underline;
+}
+
+// Version Link
+// --------------------------------------------------------------------------------------------
+
+.ver {
+position: fixed;
+top: 0px;
+padding:14px;
+font-size:.9rem;
+font-style: italic;
+overflow:hidden;
+display:none;
+}
+.ver a,
+.ver a:hover {
+text-decoration: none;
+}
+.ver a.this,
+.ver a:hover.this {
+cursor: default;
+}
+.sun {
+cursor:pointer;
+position: fixed;
+top: 20px;
+right: 30px;
+}
+
+// Side Navigation
+// --------------------------------------------------------------------------------------------
+.menu {
+position: fixed;
+top: 100px;
+width:7rem;
+font-size:1.3rem;
+line-height:2.4rem;
+font-weight:700;
+}
+  .menu a {
+  text-decoration: none;
+  padding-left:14px;
+  }
+  .menu a:hover {
+  text-decoration: underline;
+  background:none;
+  }
+  .menu a.this,
+  .menu a:hover.this {
+  text-decoration: none;
+  cursor: default;
+  padding-left:10px;
+  }
+
+// Media Items
+// --------------------------------------------------------------------------------------------
+
+.view-larger-link {
+cursor:pointer;
+}
+
+// Overlay Panel
+// --------------------------------------------------------------------------------------------
+
+.measureman {
+width:82vw; height:1px;
+}
+.overlay-header {
+padding:14px 0px 9px 23px;
+overflow:hidden;
+border-bottom:8px;
+}
+.overlay-title {
+font-size:1.6rem;
+font-weight: 700;
+}
+.overlay-details {
+padding:4px 0px;
+}
+.overlay-close {
+font-size:1rem;
+position: absolute;
+top:18px;
+right:14px;
+cursor: pointer;
+}

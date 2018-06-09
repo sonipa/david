@@ -15,16 +15,26 @@ export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('sidenav') sidenav: MatSidenav;
   subscription;
   truthiness = '';
-  titleness = '';
-  shmeetails = '';
+  overlayTitle = '';
+  overlayDetails = '';
+  isDark = false;
 
-  constructor(private location: LocationStrategy, private parentChildService: ParentChildService) { 
+  constructor(private location: LocationStrategy, private parentChildService: ParentChildService) {
     this.location.onPopState(() => {
       if ( this.sidenav.opened ) {
         history.go(1);
         this.sidenav.close();
       }
     });
+  }
+  toggleDark() {
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.toggle('dark');
+    if ( !this.isDark ) {
+      this.isDark = true;
+    } else {
+      this.isDark = false;
+    }
   }
 
   openOverlay() {
@@ -44,8 +54,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   parentFunction() {
     this.truthiness = this.parentChildService.targetx;
-    this.titleness = this.parentChildService.targety;
-    this.shmeetails = this.parentChildService.targetj;
+    this.overlayTitle = this.parentChildService.targety;
+    this.overlayDetails = this.parentChildService.targetj;
     this.sidenav.open();
   }
 }
