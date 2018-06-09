@@ -10,49 +10,48 @@
 // COLORS ONLY
 // *********************************************************************************
 
-// Light Theme (Default)
+// Sunny Theme (Default)
 // *********************************************************************************
 
-body, .ds, .mat-drawer-container, .mat-drawer, .container,
-.mat-bottom-sheet-container {
-color:$light-text-color;
-background-color:$light-background-color;
-}
-blockquote {
-border-left:$light-offset-color 0.3rem solid;
-}
-a {
-color: $light-link-color;
-  &:hover {
-  color:darken($light-link-color,10%);
+.sunny {
+  body, .ds, .mat-drawer-container, .mat-drawer, .container,
+  .mat-bottom-sheet-container {
+  color:$light-text-color;
+  background-color:$light-background-color;
   }
-}
-u {
-color:$light-link-note-color;
-  &:hover {
-  color: darken($light-link-note-color,10%);
+  blockquote {
+  border-left:$light-offset-color 0.3rem solid;
   }
-}
-b {
-color:$light-bold-color;
-}
-.ver a, .ver a:hover {
-color:$light-offset-color;
-}
-.menu a, .menu a:hover {
-color:$light-text-color;
-}
-.menu a.this, .menu a:hover.this {
-color:$light-offset-color;
-}
-.mat-grid-tile {
-background:darken($light-background-color,5%);
-}
-.overlay-close, .sun {
-color:$light-text-color;
-}
-.hidden_not_in_dark {
-  display:none;
+  a {
+  color: $light-link-color;
+    &:hover {
+    color:darken($light-link-color,10%);
+    }
+  }
+  u {
+  color:$light-link-note-color;
+    &:hover {
+    color: darken($light-link-note-color,10%);
+    }
+  }
+  b {
+  color:$light-bold-color;
+  }
+  .ver a, .ver a:hover {
+  color:$light-offset-color;
+  }
+  .menu a, .menu a:hover {
+  color:$light-text-color;
+  }
+  .menu a.this, .menu a:hover.this {
+  color:$light-offset-color;
+  }
+  .mat-grid-tile {
+  background:darken($light-background-color,5%);
+  }
+  .overlay-close, .sun {
+  color:$light-text-color;
+  }
 }
 
 // Cloudy Theme (Default)
@@ -97,19 +96,12 @@ color:$light-text-color;
   .overlay-close, .sun {
   color:$cloudy-text-color;
   }
-
-
-
   .mat-expansion-panel {
     color:$cloudy-text-color;
    background-color:lighten($cloudy-background-color,4%);
    .mat-expansion-panel {
     background-color:#fff;
    }
-  }
-
-  .hidden_not_in_dark {
-    display:none;
   }
 }
 
@@ -122,7 +114,6 @@ color:$light-text-color;
   color:$dark-text-color;
   background-color:$dark-background-color;
   }
-
   blockquote {
   border-left:$dark-offset-color 0.3rem solid;
   }
@@ -141,7 +132,6 @@ color:$light-text-color;
   b {
   color:$dark-bold-color;
   }
-
   .ver a, .ver a:hover {
   color:$dark-offset-color;
   }
@@ -157,7 +147,6 @@ color:$light-text-color;
   .overlay-close, .sun {
   color:$dark-text-color;
   }
-
   .mat-expansion-panel {
     color:$dark-text-color;
    background-color:lighten($dark-background-color,4%);
@@ -168,45 +157,11 @@ color:$light-text-color;
   .mat-expansion-indicator::after {
     color:darken($dark-text-color,50%);
   }
-  .hidden_in_dark {
-    display: none;
-  }
-  .hidden_not_in_dark {
-    display: block;
-  }
 }
-
-
-
-
-
-
-
-
-
-
-.level-up i {
-font-size:8em;
-padding-right:6px;
-opacity: 0.1;
-}
-
-.lu-number {
-
-  font-weight: 700;
-}
-
-
-
-
-
-
-
 
 // Body Text
 // --------------------------------------------------------------------------------------------
 // These styles apply to most of the text a user sees
-// ds, dp, dh1 (etc) override Material. They just love Roboto.
 
 html {
 font-size:16px;
@@ -220,6 +175,7 @@ margin:0px;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
+
 // this sets the width to make sure text is readable
 .container {
 max-width: 40rem;
@@ -235,13 +191,8 @@ margin: 0rem 0 0rem 13vw;
 padding-left: 5rem;
 padding-right:36px;
 }
-.page-end {
-height:180px;
-width:4px;
-}
 
 // various material overrides
-
 .mat-bottom-sheet-container-medium .ds,
 .mat-bottom-sheet-container-large .ds,
 .mat-bottom-sheet-container-xlarge .ds {
@@ -262,25 +213,18 @@ padding:0px !important;
 
 // --------------------------------------------------------------------------------------------
 // Element Type Font Styles
+// ds, dp, dh1 (etc) override Material. They just love Roboto.
 // --------------------------------------------------------------------------------------------
 
 h1,
-.dh1,
 h2,
 h3 {
 font-weight:700;
 }
-h1,
-.dh1 {
+h1 {
 font-size:2.6rem;
 line-height:2.8rem;
 margin:2rem 0 2rem 0;
-font-style: italic;
-}
-.dh1 {
-padding:20px 20px 0px 20px;
-margin: 0;
-line-height:2.8rem;
 }
 h2 {
 font-size:1.6rem;
@@ -343,24 +287,87 @@ font-size:.9rem;
 font-style: italic;
 overflow:hidden;
 display:none;
-}
-.ver a,
-.ver a:hover {
-text-decoration: none;
-}
-.ver a.this,
-.ver a:hover.this {
-cursor: default;
+  a,
+  a:hover {
+  text-decoration: none;
+  }
+  a.this,
+  a:hover.this {
+  cursor: default;
+  }
 }
 .sun {
+  z-index: 10;
 cursor:pointer;
 position: fixed;
 top: 10px;
 right: 25px;
 }
+.stars {
+  z-index: 9;
+position: fixed;
+top: 0px;
+right: 0px;
+display: none;
+}
+.dark .stars {
+  display: block;
+}
+  .star {
+    position: absolute;
+    top:0px;
+    right:0px;
+  }
+    .star1 {
+      top:30px;
+      right:128px;
+      font-size:.8em;
+    }
+    .star2 {
+      top:16px;
+      right:90px;
+      font-size:.4em;
+    }
+    .star3 {
+      top:105px;
+      right:162px;
+      font-size:.5em;
+    }
+    .star4 {
+      top:4px;
+      right:186px;
+      font-size:.4em;
+    }
+    .star5 {
+      top:46px;
+      right:50px;
+      font-size:.4em;
+    }
+    .star6 {
+      top:50px;
+      right:250px;
+      font-size:.3em;
+    }
+    .star7 {
+      top:54px;
+      right:106px;
+      font-size:.4em;
+    }
+    .star8 {
+      top:166px;
+      right:30px;
+      font-size:.2em;
+    }
+    .star9 {
+      top:48px;
+      right:143px;
+      font-size:.2em;
+    }
+
 
 // Side Navigation
 // --------------------------------------------------------------------------------------------
+
 .menu {
 position: fixed;
 top: 100px;
@@ -369,20 +376,20 @@ font-size:1.3rem;
 line-height:2.4rem;
 font-weight:700;
 padding-left:14px;
-}
-  .menu a {
+  a {
   text-decoration: none;
   }
-  .menu a:hover {
+  a:hover {
   text-decoration: underline;
   background:none;
   }
-  .menu a.this,
-  .menu a:hover.this {
+  a.this,
+  a:hover.this {
   text-decoration: none;
   cursor: default;
   font-style: italic;
   }
+}
 
 // Media Items
 // --------------------------------------------------------------------------------------------
@@ -404,6 +411,7 @@ border-bottom:8px;
 }
 .overlay-title {
 font-size:1.6rem;
+font-style: italic;
 font-weight: 700;
 }
 .overlay-details {
@@ -417,12 +425,16 @@ right:14px;
 cursor: pointer;
 }
 
+// Utilities and Helpers
+// --------------------------------------------------------------------------------------------
 
-.no-select {
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */
+.page-end {
+height:180px;
+width:4px;
 }
-
-
+.no-select {
+-webkit-user-select: none;  /* Chrome all / Safari all */
+-moz-user-select: none;     /* Firefox all */
+-ms-user-select: none;      /* IE 10+ */
+user-select: none;          /* Likely future */
+}

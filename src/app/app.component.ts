@@ -30,18 +30,20 @@ export class AppComponent implements OnInit, OnDestroy {
       }
     });
   }
+
   toggleDark() {
     const body = document.getElementsByTagName('body')[0];
-
     // Weather control
     if ( this.isDark ) {
       this.currentWeather = 'sunny';
       body.classList.toggle('dark');
+      body.classList.toggle('sunny');
       this.isDark = false;
       this.isSunny = true;
     } else if ( this.isSunny ) {
       this.currentWeather = 'cloudy';
       body.classList.toggle('cloudy');
+      body.classList.toggle('sunny');
       this.isCloudy = true;
       this.isSunny = false;
     } else if ( this.isCloudy ) {
