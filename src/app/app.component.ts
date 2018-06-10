@@ -18,7 +18,6 @@ export class AppComponent implements OnInit, OnDestroy {
   overlayTitle = '';
   overlayDetails = '';
   isDark = true;
-  isCloudy = false;
   isSunny = false;
   currentWeather = 'dark';
 
@@ -41,16 +40,10 @@ export class AppComponent implements OnInit, OnDestroy {
       this.isDark = false;
       this.isSunny = true;
     } else if ( this.isSunny ) {
-      this.currentWeather = 'cloudy';
-      body.classList.toggle('cloudy');
-      body.classList.toggle('sunny');
-      this.isCloudy = true;
-      this.isSunny = false;
-    } else if ( this.isCloudy ) {
       this.currentWeather = 'dark';
-      body.classList.toggle('cloudy');
+      body.classList.toggle('sunny');
       body.classList.toggle('dark');
-      this.isCloudy = false;
+      this.isSunny = false;
       this.isDark = true;
     }
   }

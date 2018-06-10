@@ -16,12 +16,14 @@ import { FeaturesComponent } from './destinations/features/features.component';
 import { LostComponent } from './destinations/lost/lost.component';
 import { ThoughtsComponent } from './destinations/thoughts/thoughts.component';
 import { ProjectsComponent } from './destinations/projects/projects.component';
+import { AboutComponent } from './destinations/about/about.component';
 
 // Notes
 import { HypercardComponent } from './notes/hypercard/hypercard.component';
 import { BBSComponent } from './notes/bbs/bbs.component';
 import { ChangeLogComponent } from './notes/change-log/change-log.component';
 import { FrameworksComponent } from './notes/frameworks/frameworks.component';
+import { SaasComponent } from './notes/saas/saas.component';
 
 const appRoutes: Routes = [
   { path: 'now', component: NowComponent },
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'features', component: FeaturesComponent },
   { path: 'thoughts', component: ThoughtsComponent },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'about', component: AboutComponent },
   { path: '',
     redirectTo: '/now',
     pathMatch: 'full'
@@ -47,14 +50,17 @@ const appRoutes: Routes = [
     BBSComponent,
     ThoughtsComponent,
     ProjectsComponent,
+    AboutComponent,
     ChangeLogComponent,
-    FrameworksComponent
+    FrameworksComponent,
+    SaasComponent
   ],
   entryComponents: [
     HypercardComponent,
     BBSComponent,
     ChangeLogComponent,
-    FrameworksComponent
+    FrameworksComponent,
+    SaasComponent
   ],
   imports: [
     RouterModule.forRoot(

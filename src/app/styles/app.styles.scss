@@ -14,11 +14,25 @@
 // *********************************************************************************
 
 .sunny {
+  .hidden_sunny {
+  display:none;
+  }
+
   body, .ds, .mat-drawer-container, .mat-drawer, .container,
   .mat-bottom-sheet-container {
   color:$light-text-color;
-  background-color:$light-background-color;
+  background-color:transparent;
   }
+
+  .mat-drawer,
+  .mat-bottom-sheet-container {
+    background: $light-background-color;
+  }
+
+  .mat-drawer-container {
+      background: $light-background-color;
+  }
+
   blockquote {
   border-left:$light-offset-color 0.3rem solid;
   }
@@ -47,61 +61,10 @@
   color:$light-offset-color;
   }
   .mat-grid-tile {
-  background:darken($light-background-color,5%);
+  background:$light-placeholder;
   }
   .overlay-close, .sun {
   color:$light-text-color;
-  }
-}
-
-// Cloudy Theme (Default)
-// *********************************************************************************
-
-.cloudy {
-  body, .ds, .mat-drawer-container, .mat-drawer, .container,
-  .mat-bottom-sheet-container {
-  color:$cloudy-text-color;
-  background-color:$cloudy-background-color;
-  }
-  blockquote {
-  border-left:$cloudy-offset-color 0.3rem solid;
-  }
-  a {
-  color: $cloudy-link-color;
-    &:hover {
-    color:darken($cloudy-link-color,10%);
-    }
-  }
-  u {
-  color:$cloudy-link-note-color;
-    &:hover {
-    color: darken($cloudy-link-note-color,10%);
-    }
-  }
-  b {
-  color:$cloudy-bold-color;
-  }
-  .ver a, .ver a:hover {
-  color:$cloudy-offset-color;
-  }
-  .menu a, .menu a:hover {
-  color:$cloudy-text-color;
-  }
-  .menu a.this, .menu a:hover.this {
-  color:$cloudy-offset-color;
-  }
-  .mat-grid-tile {
-  background:darken($cloudy-background-color,5%);
-  }
-  .overlay-close, .sun {
-  color:$cloudy-text-color;
-  }
-  .mat-expansion-panel {
-    color:$cloudy-text-color;
-   background-color:lighten($cloudy-background-color,4%);
-   .mat-expansion-panel {
-    background-color:#fff;
-   }
   }
 }
 
@@ -109,11 +72,26 @@
 // *********************************************************************************
 
 .dark {
+  .hidden_dark {
+  display:none;
+  }
+
   body, .ds, .mat-drawer-container, .mat-drawer, .container,
   .mat-bottom-sheet-container, .mat-list-text {
   color:$dark-text-color;
-  background-color:$dark-background-color;
+  background-color:transparent;
   }
+
+
+  .mat-drawer,
+  .mat-bottom-sheet-container {
+    background: $dark-background-color;
+  }
+
+  .mat-drawer-container {
+    background: $dark-background-color;
+  }
+
   blockquote {
   border-left:$dark-offset-color 0.3rem solid;
   }
@@ -142,7 +120,7 @@
   color:$dark-offset-color;
   }
   .mat-grid-tile {
-  background:darken($dark-background-color,5%);
+  background:$dark-placeholder;
   }
   .overlay-close, .sun {
   color:$dark-text-color;
@@ -236,6 +214,11 @@ font-size:1.3rem;
 line-height:1.5rem;
 margin:3rem 0 1.3rem 0;
 }
+h6 {
+margin:0px;
+font-size:1rem;
+font-weight: 400;
+}
 
 b {
 font-weight:700;
@@ -297,80 +280,19 @@ display:none;
   }
 }
 .sun {
-  z-index: 10;
+z-index: 10;
 cursor:pointer;
 position: fixed;
-top: 10px;
-right: 25px;
+top: 20px;
+right: 40px;
 }
-.stars {
-  z-index: 9;
-position: fixed;
-top: 0px;
-right: 0px;
-display: none;
-}
-.dark .stars {
-  display: block;
-}
-  .star {
-    position: absolute;
-    top:0px;
-    right:0px;
-  }
-    .star1 {
-      top:30px;
-      right:128px;
-      font-size:.8em;
-    }
-    .star2 {
-      top:16px;
-      right:90px;
-      font-size:.4em;
-    }
-    .star3 {
-      top:105px;
-      right:162px;
-      font-size:.5em;
-    }
-    .star4 {
-      top:4px;
-      right:186px;
-      font-size:.4em;
-    }
-    .star5 {
-      top:46px;
-      right:50px;
-      font-size:.4em;
-    }
-    .star6 {
-      top:50px;
-      right:250px;
-      font-size:.3em;
-    }
-    .star7 {
-      top:54px;
-      right:106px;
-      font-size:.4em;
-    }
-    .star8 {
-      top:166px;
-      right:30px;
-      font-size:.2em;
-    }
-    .star9 {
-      top:48px;
-      right:143px;
-      font-size:.2em;
-    }
-
 
 // Side Navigation
 // --------------------------------------------------------------------------------------------
 
 .menu {
 position: fixed;
-top: 100px;
+top: 110px;
 width:7rem;
 font-size:1.3rem;
 line-height:2.4rem;
@@ -437,4 +359,31 @@ width:4px;
 -moz-user-select: none;     /* Firefox all */
 -ms-user-select: none;      /* IE 10+ */
 user-select: none;          /* Likely future */
+}
+
+// Stars
+// --------------------------------------------------------------------------------------------\
+
+.stars {
+z-index: -1;
+position: fixed;
+left:0;
+top:0;
+  .star {
+  position:absolute;
+  left:0px;
+  top:0px;
+  }
+  .star-lg {
+  font-size:1rem;
+  }
+  .star-md {
+  font-size:.8rem;
+  }
+  .star-md {
+  font-size:.5rem;
+  }
+}
+.sunny .stars {
+opacity: 0.8;
 }

@@ -5,19 +5,13 @@ $light-bold-color: #d20a0a;
 $light-text-color: rgb(22, 22, 22);
 $light-link-color: #0070ff;
 $light-link-note-color: #1f8f19;
-
-// Cloudy Theme
-$cloudy-background-color: #d2ebff;
-$cloudy-offset-color: #87bbe6;
-$cloudy-bold-color: #003f7b;
-$cloudy-text-color: #3a2c08;
-$cloudy-link-color: #0070ff;
-$cloudy-link-note-color: #288b00;
+$light-placeholder:#000;
 
 // Dark Theme
-$dark-background-color: #202124;
+$dark-background-color: #131414;
 $dark-offset-color: #858585;
-$dark-bold-color: #ff9059;
+$dark-bold-color: #fff900;
 $dark-text-color: #fff;
 $dark-link-color: #78dfff;
 $dark-link-note-color: #50ffb0;
+$dark-placeholder:#fff;
