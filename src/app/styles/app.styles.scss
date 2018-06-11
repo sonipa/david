@@ -2,6 +2,7 @@
 @import "~devicon/devicon.css";
 @import "~devicon/devicon-colors.css";
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 @import './variables';
 
@@ -167,7 +168,7 @@ max-width: 70rem;
 min-width: 25rem;
 margin: 0rem 0 0rem 13vw;
 padding-left: 5rem;
-padding-right:36px;
+padding-right:45px;
 }
 
 // various material overrides
@@ -246,16 +247,12 @@ a {
 cursor: pointer;
 text-decoration: none;
 border-radius: 2px;
-}
-a:hover {
 text-decoration: underline;
 }
 u {
 cursor: pointer;
 text-decoration: none;
 border-radius: 2px;
-}
-u:hover {
 text-decoration: underline;
 }
 
@@ -284,7 +281,7 @@ z-index: 10;
 cursor:pointer;
 position: fixed;
 top: 20px;
-right: 40px;
+right: 34px;
 }
 
 // Side Navigation
@@ -369,21 +366,39 @@ z-index: -1;
 position: fixed;
 left:0;
 top:0;
+width:1059px;
+height:667px;
   .star {
   position:absolute;
   left:0px;
   top:0px;
   }
   .star-lg {
-  font-size:1rem;
+  font-size:.8rem;
+  color:#DBDDF6;
+  opacity: 0.8;
   }
   .star-md {
   font-size:.8rem;
+  color:#FEE57D;
+  opacity: 0.6;
   }
-  .star-md {
+  .star-sm {
+  font-size:.6rem;
+  color:#99BAC0;
+  opacity: 0.6;
+  }
+  .star-xs {
   font-size:.5rem;
+  color:#4C6F51;
+  opacity: 0.9;
   }
 }
-.sunny .stars {
-opacity: 0.8;
+.sunny .star {
+  color:#000;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
 }

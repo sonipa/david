@@ -25,6 +25,9 @@ import { ChangeLogComponent } from './notes/change-log/change-log.component';
 import { FrameworksComponent } from './notes/frameworks/frameworks.component';
 import { SaasComponent } from './notes/saas/saas.component';
 
+// Overlays
+import { SnowDayComponent } from './overlays/snow-day/snow-day.component';
+
 const appRoutes: Routes = [
   { path: 'now', component: NowComponent },
   { path: 'changelog', component: ChangelogComponent },
@@ -53,7 +56,8 @@ const appRoutes: Routes = [
     AboutComponent,
     ChangeLogComponent,
     FrameworksComponent,
-    SaasComponent
+    SaasComponent,
+    SnowDayComponent
   ],
   entryComponents: [
     HypercardComponent,

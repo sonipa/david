@@ -6,50 +6,78 @@
         <div class="overlay-close" matTooltip="Close Panel" [matTooltipPosition]="'before'"><mat-icon>close</mat-icon></div>
     </div>
     <div class="measureman"></div>
-    <mat-grid-list cols="1" rowHeight="16:9">
-      <mat-grid-tile>{{templateName}}</mat-grid-tile>
-    </mat-grid-list>
+    <div [ngSwitch]="templateName">
+      <app-snow-day *ngSwitchCase="'snow-day'"></app-snow-day>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="sun no-select" (click)="toggleDark()" [ngSwitch]="currentWeather">
       <mat-icon *ngSwitchCase="'dark'" matTooltip="Turn on the lights." [matTooltipPosition]="'before'">brightness_3</mat-icon>
       <mat-icon *ngSwitchCase="'sunny'" matTooltip="Turn off the lights." [matTooltipPosition]="'before'">wb_sunny</mat-icon>
     </div>
-    <div class="stars no-select">
-      <!-- Larget Stars -->
-      <div class="star star-lg" style="left: 130px; top:34px;">.</div>
-      <div class="star star-lg" style="left: 280px; top:78px;">.</div>
-      <div class="star star-lg" style="left: 278px; top:164px;">.</div>
-      <div class="star star-lg" style="left: 82px; top:128px;">.</div>
-      <div class="star star-lg" style="left: 359px; top:225px;">.</div>
-      <div class="star star-lg" style="left: 416px; top:280px;">.</div>
-      <div class="star star-lg" style="left: 628px; top:39px;">.</div>
-      <div class="star star-lg" style="left: 538px; top:290px;">.</div>
-      <div class="star star-lg" style="left: 783px; top:352px;">.</div>
-      <div class="star star-lg" style="left: 1013px; top:337px;">.</div>
-      <!-- Medium Stars-->
-      <div class="star star-md" style="left: 527px; top:253px;">.</div>
-      <div class="star star-md" style="left: 629px; top:348px;">.</div>
-      <div class="star star-md" style="left: 929px; top:304px;">.</div>
-      <div class="star star-md" style="left: 923px; top:493px;">.</div>
-      <div class="star star-md" style="left: 144px; top:574px;">.</div>
-      <div class="star star-md" style="left: 195px; top:609px;">.</div>
-      <div class="star star-md" style="left: 302px; top:441px;">.</div>
-      <div class="star star-md" style="left: 774px; top:467px;">.</div>
-      <!-- Smallest Stars -->
-      <div class="star star-sm" style="left: 20px; top:20px;">.</div>
-    </div>
     <div class="ver"><a [routerLink]="['/changelog']" routerLinkActive="this">v3</a></div>
     <div class="menu no-select">
       <a [routerLink]="['/now']" routerLinkActive="this">Now</a><br>
-      <a [routerLink]="['/changelog']" routerLinkActive="this">Changelog</a><br>
-      <a [routerLink]="['/features']" routerLinkActive="this">Features</a><br>
       <a [routerLink]="['/thoughts']" routerLinkActive="this">Thoughts</a><br>
       <a [routerLink]="['/projects']" routerLinkActive="this">Projects</a><br>
+      <a [routerLink]="['/features']" routerLinkActive="this">Features</a><br>
+      <a [routerLink]="['/changelog']" routerLinkActive="this">Changelog</a><br>
       <a [routerLink]="['/about']" routerLinkActive="this">About</a>
     </div>
     <div style="padding-top:1.5rem;">
       <router-outlet></router-outlet>
     </div>
+    <div class="stars no-select">
+        <!-- Larget Stars -->
+        <div class="star star-lg" style="left: 130px; top:34px;">.</div>
+        <div class="star star-lg" style="left: 328px; top:100px;">.</div>
+        <div class="star star-lg" style="left: 82px; top:128px;">.</div>
+        <div class="star star-lg" style="left: 359px; top:225px;">.</div>
+        <div class="star star-lg" style="left: 416px; top:280px;">.</div>
+        <div class="star star-lg" style="left: 628px; top:39px;">.</div>
+        <div class="star star-lg" style="left: 538px; top:290px;">.</div>
+        <div class="star star-lg" style="left: 783px; top:352px;">.</div>
+        <div class="star star-lg" style="left: 1013px; top:337px;">.</div>
+        <!-- Medium Stars-->
+        <div class="star star-md" style="left: 527px; top:255px;">.</div>
+        <div class="star star-md" style="left: 629px; top:350px;">.</div>
+        <div class="star star-md" style="left: 929px; top:306px;">.</div>
+        <div class="star star-md" style="left: 923px; top:495px;">.</div>
+        <div class="star star-md" style="left: 144px; top:576px;">.</div>
+        <div class="star star-md" style="left: 195px; top:611px;">.</div>
+        <div class="star star-md" style="left: 302px; top:443px;">.</div>
+        <div class="star star-md" style="left: 774px; top:469px;">.</div>
+        <!-- Smallest Stars -->
+        <div class="star star-sm" style="left: 54px; top:288px;">.</div>
+        <div class="star star-sm" style="left: 364px; top:251px;">.</div>
+        <div class="star star-sm" style="left: 444px; top:323px;">.</div>
+        <div class="star star-sm" style="left: 442px; top:598px;">.</div>
+        <div class="star star-sm" style="left: 518px; top:538px;">.</div>
+        <div class="star star-sm" style="left: 528px; top:384px;">.</div>
+        <div class="star star-sm" style="left: 538px; top:389px;">.</div>
+        <div class="star star-sm" style="left: 539px; top:416px;">.</div>
+        <div class="star star-sm" style="left: 576px; top:413px;">.</div>
+        <div class="star star-sm" style="left: 562px; top:355px;">.</div>
+        <div class="star star-sm" style="left: 133px; top:351px;">.</div>
+        <div class="star star-sm" style="left: 128px; top:362px;">.</div>
+        <div class="star star-sm" style="left: 102px; top:347px;">.</div>
+        <div class="star star-sm" style="left: 64px; top:552px;">.</div>
+        <div class="star star-sm" style="left: 108px; top:560px;">.</div>
+        <!-- Really Distant Stars -->
+        <div class="star star-xs" style="left: 534px; top:17px;">.</div>
+        <div class="star star-xs" style="left: 633px; top:118px;">.</div>
+        <div class="star star-xs" style="left: 718px; top:157px;">.</div>
+        <div class="star star-xs" style="left: 739px; top:161px;">.</div>
+        <div class="star star-xs" style="left: 796px; top:192px;">.</div>
+        <div class="star star-xs" style="left: 947px; top:321px;">.</div>
+        <div class="star star-xs" style="left: 977px; top:569px;">.</div>
+        <div class="star star-xs" style="left: 1022px; top:542px;">.</div>
+        <div class="star star-xs" style="left: 849px; top:549px;">.</div>
+        <div class="star star-xs" style="left: 874px; top:605px;">.</div>
+        <div class="star star-xs" style="left: 787px; top:581px;">.</div>
+        <div class="star star-xs" style="left: 799px; top:606px;">.</div>
+        <div class="star star-xs" style="left: 826px; top:593px;">.</div>
+        <div class="star star-xs" style="left: 425px; top:314px;">.</div>
+      </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

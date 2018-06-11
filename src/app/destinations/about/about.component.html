@@ -1,10 +1,15 @@
 <section class="container">
   <h1>Hello.</h1>
-  <p>My name is <b>David Mulhern</b>.<br>There is a good chance we're strangers.</p>
-  <h3>Strangers</h3>
-  <p>That's probably the point of this site. To let strangers know who I am. So to strangers, I say &ldquo;Hello.&rdquo;</p>
-  <h3>Profiles</h3>
-  <p>The only service I add content to is Instagram and this. I rarely check Facebook or LinkedIn or anything like that. The best way to contact me is through email (or Instagram).</p>
+  <p>My name is <b>David Mulhern</b></p>
+  <mat-grid-list cols="1" rowHeight="2:1" gutterSize="4">
+      <mat-grid-tile (click)="showOverlay('snow-day', 'Outside', 'Standing in our snow-covered garden not too long ago.')" class="view-larger-link" matTooltip="View Larger" [matTooltipPosition]="'after'">
+        <img src="/assets/photos/0221181110a-small.jpg" class="thumbnail-image" />
+      </mat-grid-tile>
+  </mat-grid-list>
+  <p>I live in <u>Oregon's first city</u>. I was born in <u>Ketchikan</u> and have lived in <u>Estes Park</u> and <u>Chandler</u>.</p>
+  <h2>Strangers</h2>
+  <p>There is a good chance we're strangers. That is partially the purpose for this site... to share content with people who I most likely haven't met.</p>
+  <p>The only service I add content to is Instagram. I rarely check Facebook or LinkedIn. These days, the best way to contact me is through email or Instagram.</p>
   <blockquote>
     david@mulhern.me<br>
     <a href="https://www.instagram.com/dcmulhern/" target="_blank">instagram/dcmulhern</a>
