@@ -309,6 +309,12 @@ padding-left:14px;
   font-style: italic;
   }
 }
+.copyright {
+position: fixed;
+bottom: 14px;
+left: 14px;
+font-size:0.7rem;
+}
 
 // Media Items
 // --------------------------------------------------------------------------------------------
@@ -320,8 +326,14 @@ cursor:pointer;
 // Overlay Panel
 // --------------------------------------------------------------------------------------------
 
+.measureman_limiter {
+max-width: 1000px;
+overflow: hidden;
+height:1px;
+}
 .measureman {
-width:82vw; height:1px;
+width:70vw;
+height:1px;
 }
 .overlay-header {
 padding:14px 0px 9px 23px;
@@ -335,6 +347,10 @@ font-weight: 700;
 }
 .overlay-details {
 padding:4px 0px;
+}
+.overlay-p {
+  max-width:70vw;
+  padding:10px 0px 10px 23px;
 }
 .overlay-close {
 font-size:1rem;
@@ -366,8 +382,6 @@ z-index: -1;
 position: fixed;
 left:0;
 top:0;
-width:1059px;
-height:667px;
   .star {
   position:absolute;
   left:0px;
@@ -394,8 +408,8 @@ height:667px;
   opacity: 0.9;
   }
 }
-.sunny .star {
-  color:#000;
+.sunny .stars {
+  display:none;
 }
 
 .thumbnail-image {

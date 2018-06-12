@@ -1,9 +1,8 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import {MatSidenav} from '@angular/material/sidenav';
+import { MatSidenav } from '@angular/material/sidenav';
 import { ParentChildService } from './services/parent-child.service';
-import {Subscription} from 'rxjs/Subscription';
-
 import { LocationStrategy } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,20 +11,23 @@ import { LocationStrategy } from '@angular/common';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  @ViewChild('sidenav') sidenav: MatSidenav;
+  @ViewChild('matDrawer') matDrawer: MatSidenav;
+
   subscription;
+  routeChangeListen;
+  thisSun;
   templateName = '';
   overlayTitle = '';
   overlayDetails = '';
-  isDark = false;
-  isSunny = true;
-  currentWeather = 'sunny';
+  isDark = true;
+  isSunny = false;
+  currentWeather = 'dark';
 
-  constructor(private location: LocationStrategy, private parentChildService: ParentChildService) {
+  constructor(private location: LocationStrategy, private parentChildService: ParentChildService, private router: Router) {
     this.location.onPopState(() => {
-      if ( this.sidenav.opened ) {
+      if ( this.matDrawer.opened ) {
         history.go(1);
-        this.sidenav.close();
+        this.matDrawer.close();
       }
     });
   }
@@ -47,25 +49,39 @@ export class AppComponent implements OnInit, OnDestroy {
       this.isDark = true;
     }
   }
-  openOverlay() {
-    this.sidenav.open();
-  }
-  closeOverlay() {
-    this.sidenav.close();
-  }
   ngOnInit() {
     this.subscription = this.parentChildService.on('call-parent')
       .subscribe(
-        () => this.parentFunction()
+        () => this.defineOverlay()
       );
+    this.router.events.subscribe((evt) => {
+        if (!(evt instanceof NavigationEnd)) {
+            return;
+        }
+        const myDiv = document.getElementById('theMainContent');
+        myDiv.scrollTo(0, 0);
+    });
+    this.thisSun = document.getElementById('theSun');
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
-  parentFunction() {
-    this.templateName = this.parentChildService.targetTemplateName;
-    this.overlayTitle = this.parentChildService.targetOverlayTitle;
-    this.overlayDetails = this.parentChildService.targetDetails;
-    this.sidenav.open();
+  defineOverlay() {
+    if ( this.templateName !== this.parentChildService.targetTemplateName ) {
+      this.templateName = this.parentChildService.targetTemplateName;
+      this.overlayTitle = this.parentChildService.targetOverlayTitle;
+      this.overlayDetails = this.parentChildService.targetDetails;
+      const myDi2v = document.getElementById('theDrawer');
+      myDi2v.scrollTo(0, 0);
+    }
+    this.openOverlay();
+  }
+  openOverlay() {
+    this.matDrawer.open();
+    this.thisSun.style.display = 'none';
+  }
+  closeOverlay() {
+    this.matDrawer.close();
+    this.thisSun.style.display = 'block';
   }
 }

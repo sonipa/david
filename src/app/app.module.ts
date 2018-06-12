@@ -27,6 +27,8 @@ import { SaasComponent } from './notes/saas/saas.component';
 
 // Overlays
 import { SnowDayComponent } from './overlays/snow-day/snow-day.component';
+import { OldSitesComponent } from './overlays/old-sites/old-sites.component';
+import { OldSitesZeroComponent } from './overlays/old-sites-zero/old-sites-zero.component';
 
 const appRoutes: Routes = [
   { path: 'now', component: NowComponent },
@@ -57,7 +59,9 @@ const appRoutes: Routes = [
     ChangeLogComponent,
     FrameworksComponent,
     SaasComponent,
-    SnowDayComponent
+    SnowDayComponent,
+    OldSitesComponent,
+    OldSitesZeroComponent
   ],
   entryComponents: [
     HypercardComponent,
@@ -69,7 +73,9 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: false }
+      {
+        enableTracing: false
+      }
     ),
     BrowserModule,
     BrowserAnimationsModule,
