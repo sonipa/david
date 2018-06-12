@@ -1,0 +1,418 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~devicon/devicon.css";
+@import "~devicon/devicon-colors.css";
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+@import './variables';
+
+// *********************************************************************************
+//
+// COLORS ONLY
+// *********************************************************************************
+
+// Sunny Theme (Default)
+// *********************************************************************************
+
+.sunny {
+  .hidden_sunny {
+  display:none;
+  }
+
+  body, .ds, .mat-drawer-container, .mat-drawer, .container,
+  .mat-bottom-sheet-container {
+  color:$light-text-color;
+  background-color:transparent;
+  }
+
+  .mat-drawer,
+  .mat-bottom-sheet-container {
+    background: $light-background-color;
+  }
+
+  .mat-drawer-container {
+      background: $light-background-color;
+  }
+
+  blockquote {
+  border-left:$light-offset-color 0.3rem solid;
+  }
+  a {
+  color: $light-link-color;
+    &:hover {
+    color:darken($light-link-color,10%);
+    }
+  }
+  u {
+  color:$light-link-note-color;
+    &:hover {
+    color: darken($light-link-note-color,10%);
+    }
+  }
+  b {
+  color:$light-bold-color;
+  }
+  .ver a, .ver a:hover {
+  color:$light-offset-color;
+  }
+  .menu a, .menu a:hover {
+  color:$light-text-color;
+  }
+  .menu a.this, .menu a:hover.this {
+  color:$light-offset-color;
+  }
+  .mat-grid-tile {
+  background:$light-placeholder;
+  }
+  .overlay-close, .sun {
+  color:$light-text-color;
+  }
+}
+
+// Dark Theme
+// *********************************************************************************
+
+.dark {
+  .hidden_dark {
+  display:none;
+  }
+
+  body, .ds, .mat-drawer-container, .mat-drawer, .container,
+  .mat-bottom-sheet-container, .mat-list-text {
+  color:$dark-text-color;
+  background-color:transparent;
+  }
+
+
+  .mat-drawer,
+  .mat-bottom-sheet-container {
+    background: $dark-background-color;
+  }
+
+  .mat-drawer-container {
+    background: $dark-background-color;
+  }
+
+  blockquote {
+  border-left:$dark-offset-color 0.3rem solid;
+  }
+  a {
+  color: $dark-link-color;
+    &:hover {
+    color:darken($dark-link-color,10%);
+    }
+  }
+  u {
+  color:$dark-link-note-color;
+    &:hover {
+    color: darken($dark-link-note-color,10%);
+    }
+  }
+  b {
+  color:$dark-bold-color;
+  }
+  .ver a, .ver a:hover {
+  color:$dark-offset-color;
+  }
+  .menu a, .menu a:hover {
+  color:$dark-text-color;
+  }
+  .menu a.this, .menu a:hover.this {
+  color:$dark-offset-color;
+  }
+  .mat-grid-tile {
+  background:$dark-placeholder;
+  }
+  .overlay-close, .sun {
+  color:$dark-text-color;
+  }
+  .mat-expansion-panel {
+    color:$dark-text-color;
+   background-color:lighten($dark-background-color,4%);
+   .mat-expansion-panel {
+    background-color:lighten($dark-background-color,9%);
+   }
+  }
+  .mat-expansion-indicator::after {
+    color:darken($dark-text-color,50%);
+  }
+}
+
+// Body Text
+// --------------------------------------------------------------------------------------------
+// These styles apply to most of the text a user sees
+
+html {
+font-size:16px;
+}
+body,
+.ds {
+font-family: 'Lora', serif;
+font-size: 1rem;
+font-weight:400;
+margin:0px;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+// this sets the width to make sure text is readable
+.container {
+max-width: 40rem;
+min-width: 25rem;
+margin: 0rem 0 0rem 13vw;
+padding: 0 6rem;
+overflow:hidden;
+}
+.container-full {
+max-width: 70rem;
+min-width: 25rem;
+margin: 0rem 0 0rem 13vw;
+padding-left: 5rem;
+padding-right:45px;
+}
+
+// various material overrides
+.mat-bottom-sheet-container-medium .ds,
+.mat-bottom-sheet-container-large .ds,
+.mat-bottom-sheet-container-xlarge .ds {
+max-width: 33rem;
+}
+.mat-list-text {
+text-align: center;
+}
+.material-icons {
+vertical-align: text-bottom;
+}
+.mat-expansion-panel-header .material-icons {
+font-size:20px;
+}
+.mat-bottom-sheet-container {
+padding:0px !important;
+}
+
+// --------------------------------------------------------------------------------------------
+// Element Type Font Styles
+// ds, dp, dh1 (etc) override Material. They just love Roboto.
+// --------------------------------------------------------------------------------------------
+
+h1,
+h2,
+h3 {
+font-weight:700;
+}
+h1 {
+font-size:2.6rem;
+line-height:2.8rem;
+margin:2rem 0 2rem 0;
+}
+h2 {
+font-size:1.6rem;
+line-height:1.9rem;
+margin:3.5rem 0 1.5rem 0;
+}
+h3 {
+font-size:1.3rem;
+line-height:1.5rem;
+margin:3rem 0 1.3rem 0;
+}
+h6 {
+margin:0px;
+font-size:1rem;
+font-weight: 400;
+}
+
+b {
+font-weight:700;
+}
+p,
+.dp {
+font-size:1.2rem;
+line-height:1.9rem;
+margin:1rem 0;
+}
+.dp {
+padding: 8px 20px 8px 20px;
+}
+blockquote {
+font-size:1.1rem;
+line-height:1.9rem;
+margin:2rem 0.5rem 2rem 2.5rem;
+padding:1rem;
+padding-left: 2.5rem;
+font-style: italic;
+}
+
+// Links
+a {
+cursor: pointer;
+text-decoration: none;
+border-radius: 2px;
+text-decoration: underline;
+}
+u {
+cursor: pointer;
+text-decoration: none;
+border-radius: 2px;
+text-decoration: underline;
+}
+
+// Version Link
+// --------------------------------------------------------------------------------------------
+
+.ver {
+position: fixed;
+top: 0px;
+padding:14px;
+font-size:.9rem;
+font-style: italic;
+overflow:hidden;
+display:none;
+  a,
+  a:hover {
+  text-decoration: none;
+  }
+  a.this,
+  a:hover.this {
+  cursor: default;
+  }
+}
+.sun {
+z-index: 10;
+cursor:pointer;
+position: fixed;
+top: 20px;
+right: 34px;
+}
+
+// Side Navigation
+// --------------------------------------------------------------------------------------------
+
+.menu {
+position: fixed;
+top: 110px;
+width:7rem;
+font-size:1.3rem;
+line-height:2.4rem;
+font-weight:700;
+padding-left:14px;
+  a {
+  text-decoration: none;
+  }
+  a:hover {
+  text-decoration: underline;
+  background:none;
+  }
+  a.this,
+  a:hover.this {
+  text-decoration: none;
+  cursor: default;
+  font-style: italic;
+  }
+}
+.copyright {
+position: fixed;
+bottom: 14px;
+left: 14px;
+font-size:0.7rem;
+}
+
+// Media Items
+// --------------------------------------------------------------------------------------------
+
+.view-larger-link {
+cursor:pointer;
+}
+
+// Overlay Panel
+// --------------------------------------------------------------------------------------------
+
+.measureman_limiter {
+max-width: 1000px;
+overflow: hidden;
+height:1px;
+}
+.measureman {
+width:70vw;
+height:1px;
+}
+.overlay-header {
+padding:14px 0px 9px 23px;
+overflow:hidden;
+border-bottom:8px;
+}
+.overlay-title {
+font-size:1.6rem;
+font-style: italic;
+font-weight: 700;
+}
+.overlay-details {
+padding:4px 0px;
+}
+.overlay-p {
+  max-width:70vw;
+  padding:10px 0px 10px 23px;
+}
+.overlay-close {
+font-size:1rem;
+position: absolute;
+top:18px;
+right:14px;
+cursor: pointer;
+}
+
+// Utilities and Helpers
+// --------------------------------------------------------------------------------------------
+
+.page-end {
+height:180px;
+width:4px;
+}
+.no-select {
+-webkit-user-select: none;  /* Chrome all / Safari all */
+-moz-user-select: none;     /* Firefox all */
+-ms-user-select: none;      /* IE 10+ */
+user-select: none;          /* Likely future */
+}
+
+// Stars
+// --------------------------------------------------------------------------------------------\
+
+.stars {
+z-index: -1;
+position: fixed;
+left:0;
+top:0;
+  .star {
+  position:absolute;
+  left:0px;
+  top:0px;
+  }
+  .star-lg {
+  font-size:.8rem;
+  color:#DBDDF6;
+  opacity: 0.8;
+  }
+  .star-md {
+  font-size:.8rem;
+  color:#FEE57D;
+  opacity: 0.6;
+  }
+  .star-sm {
+  font-size:.6rem;
+  color:#99BAC0;
+  opacity: 0.6;
+  }
+  .star-xs {
+  font-size:.5rem;
+  color:#4C6F51;
+  opacity: 0.9;
+  }
+}
+.sunny .stars {
+  display:none;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+}

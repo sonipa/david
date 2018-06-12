@@ -1,22 +1,11 @@
-### david
+# David
 
-> Builds from this project are hosted at [sonipa.github.io](http://sonipa.github.io)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-This (will be) the source for my site. The old one will be gone when this is ready, so get your last looks for the sort of broken version 2.1: [davidmulhern.com](http://davidmulhern.com)
+## Development server
 
-Decisions:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-* Dart
-* Angular2
+## Build
 
-That's it so far.
-
-### Instructions
-
-* `pub install` to get started
-* `pub serve` to work in live mode
-* `pub build` to create static output
-
-### 2.1 Where we left off
-
-The old site was very jquery focused. I don't know what year that was. Very old. I still talk about being a "designer" in the past. That was a world before design was commoditized and when PHP still made sense. I'll just make the new site in Angular2 and keep the source here for now.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
