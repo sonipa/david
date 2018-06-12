@@ -1,8 +1,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~devicon/devicon.css";
 @import "~devicon/devicon-colors.css";
-@import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import 'lora'; // The Font
+@import 'icons'; // Material Icons
 
 @import './variables';
 
@@ -363,6 +363,11 @@ cursor: pointer;
 // Utilities and Helpers
 // --------------------------------------------------------------------------------------------
 
+.the-seperator {
+  height:2px;
+  width:100%;
+  border:yellow 1px dashed;
+}
 .page-end {
 height:180px;
 width:4px;
