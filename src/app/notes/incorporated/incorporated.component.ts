@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { MatBottomSheetRef } from '@angular/material';
 
 @Component({
-  selector: 'app-bbs',
-  templateUrl: './bbs.component.html'
+  selector: 'app-incorporated',
+  templateUrl: './incorporated.component.html'
 })
-export class BBSComponent {
-  constructor(private bottomSheetRef: MatBottomSheetRef<BBSComponent>) {}
+export class IncorporatedComponent {
+  constructor(private bottomSheetRef: MatBottomSheetRef<IncorporatedComponent>) {}
   openLink(event: MouseEvent): void {
     this.bottomSheetRef.dismiss();
     event.preventDefault();

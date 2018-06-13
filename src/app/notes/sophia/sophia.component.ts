@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 
 @Component({
-  selector: 'app-saas',
-  templateUrl: './saas.component.html'
+  selector: 'app-sophia',
+  templateUrl: './sophia.component.html'
 })
-export class SaasComponent {
-  constructor(private bottomSheetRef: MatBottomSheetRef<SaasComponent>) {}
+export class SophiaComponent {
+  constructor(private bottomSheetRef: MatBottomSheetRef<SophiaComponent>) {}
   openLink(event: MouseEvent): void {
     this.bottomSheetRef.dismiss();
     event.preventDefault();

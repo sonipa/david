@@ -34,7 +34,8 @@
       background: $light-background-color;
   }
 
-  blockquote {
+  blockquote,
+  .dq  {
   border-left:$light-offset-color 0.3rem solid;
   }
   a {
@@ -93,7 +94,7 @@
     background: $dark-background-color;
   }
 
-  blockquote {
+  .dq,blockquote {
   border-left:$dark-offset-color 0.3rem solid;
   }
   a {
@@ -233,7 +234,8 @@ margin:1rem 0;
 .dp {
 padding: 8px 20px 8px 20px;
 }
-blockquote {
+blockquote,
+.dq {
 font-size:1.1rem;
 line-height:1.9rem;
 margin:2rem 0.5rem 2rem 2.5rem;
@@ -342,7 +344,6 @@ border-bottom:8px;
 }
 .overlay-title {
 font-size:1.6rem;
-font-style: italic;
 font-weight: 700;
 }
 .overlay-details {
@@ -363,10 +364,16 @@ cursor: pointer;
 // Utilities and Helpers
 // --------------------------------------------------------------------------------------------
 
+.dptxt {
+position:absolute;
+font-size:1.4rem;
+font-weight: 700;
+color:#fff;
+}
+
 .the-seperator {
-  height:2px;
-  width:100%;
-  border:yellow 1px dashed;
+height:10vh;
+width:100%;
 }
 .page-end {
 height:180px;

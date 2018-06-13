@@ -12,6 +12,10 @@
       <app-snow-day *ngSwitchCase="'snow-day'"></app-snow-day>
       <app-old-sites *ngSwitchCase="'old-sites'"></app-old-sites>
       <app-old-sites-zero *ngSwitchCase="'old-sites-zero'"></app-old-sites-zero>
+      <app-into-the-sun *ngSwitchCase="'into-the-sun'"></app-into-the-sun>
+      <app-place-ketchikan *ngSwitchCase="'place-ketchikan'"></app-place-ketchikan>
+      <app-place-chandler *ngSwitchCase="'place-chandler'"></app-place-chandler>
+      <app-place-estes *ngSwitchCase="'place-estes'"></app-place-estes>
     </div>
   </mat-drawer>
   <mat-drawer-content role="main" #matDrawerContent id="theMainContent">
@@ -21,8 +25,8 @@
     </div>
     <div class="ver"><a [routerLink]="['/changelog']" routerLinkActive="this">v3</a></div>
     <div class="menu no-select" role="navigation">
-      <a [routerLink]="['/now']" routerLinkActive="this">Now</a><br>
-      <a [routerLink]="['/thoughts']" routerLinkActive="this">Thoughts</a><br>
+      ✔<a [routerLink]="['/now']" routerLinkActive="this">Now</a><br>
+      ✔<a [routerLink]="['/thoughts']" routerLinkActive="this">Thoughts</a><br>
       <a [routerLink]="['/projects']" routerLinkActive="this">Projects</a><br>
       <a [routerLink]="['/changelog']" routerLinkActive="this">Changelog</a><br>
       <a [routerLink]="['/features']" routerLinkActive="this">Features</a><br>
