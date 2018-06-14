@@ -213,20 +213,25 @@ font-weight:700;
 h1 {
 font-size:2.6rem;
 line-height:2.8rem;
-margin:2rem 0 2rem 0;
+margin:2rem 0 1rem 0;
+font-style: italic;
+}
+.thoughts h1 {
+margin-bottom:0;
 }
 h2 {
 font-size:1.6rem;
 line-height:1.9rem;
-margin:3.5rem 0 1.5rem 0;
+margin:3.5rem 0 1rem 0;
 }
 h3 {
 font-size:1.3rem;
 line-height:1.5rem;
-margin:3rem 0 1.3rem 0;
+margin:3rem 0 1rem 0;
 }
 h6 {
 margin:0px;
+margin-bottom:2rem;
 font-size:1rem;
 font-weight: 400;
 }
@@ -317,7 +322,6 @@ padding-left:14px;
   a:hover.this {
   text-decoration: none;
   cursor: default;
-  font-style: italic;
   }
 }
 .copyright {
@@ -390,6 +394,9 @@ text-shadow: 0px 1px 0 #439CFF, 0px 2px 0 darken(#439CFF,20%)
 }
 .dptxt-brown {
 text-shadow: 0px 1px 0 #9C8244, 0px 2px 0 darken(#9C8244,20%)
+}
+.dptxt-w {
+  text-shadow: none;
 }
 
 .the-seperator {

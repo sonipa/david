@@ -1,12 +1,15 @@
 <section class="container">
-  <h1>Technology</h1>
-  <h6>Created by <a [routerLink]="'/about'">David</a></h6>
-  <p>The last time I made this site, I used a template and talked about the <u (click)="openFrameworks();" matTooltip="What?" [matTooltipPosition]="'below'">frameworks &amp; libraries</u> I was using at the time.</p>
+  <h1>Old Libraries</h1>
+  <h6><b>Saturday</b> June 9th 2018 at 11:59pm</h6>
+  <p>The last time I made this site, I used a template and focused on <u (click)="openFrameworks();" matTooltip="What?" [matTooltipPosition]="'below'">libraries</u> I was using. Before that, this site was about projects.</p>
 </section>
 <section class="container-full">
-  <mat-grid-list cols="2" rowHeight="5:4" gutterSize="4">
+  <mat-grid-list cols="3" rowHeight="5:4" gutterSize="4">
     <mat-grid-tile (click)="showOverlay('old-sites', '2012', 'Six years ago I was focused on development.')" class="view-larger-link" matTooltip="2012" [matTooltipPosition]="'before'">
       <img src="/assets/photos/old-sites/two-one-thumb.jpg" class="thumbnail-image" />
+    </mat-grid-tile>
+    <mat-grid-tile class="view-larger-link" matTooltip="2001-2011" [matTooltipPosition]="'above'">
+      <img src="/assets/photos/old-sites/cloud-thumb.png" class="thumbnail-image" />
     </mat-grid-tile>
     <mat-grid-tile (click)="showOverlay('old-sites-zero', '1999', 'Here are some screenshots of version <b>one</b> of this site.')" class="view-larger-link" matTooltip="1999" [matTooltipPosition]="'above'">
       <img src="/assets/photos/old-sites/zero-thumb.png" class="thumbnail-image" />
@@ -14,7 +17,7 @@
   </mat-grid-list>
 </section>
 <section class="container">
-  <p>This time around I'll focus on <a [routerLink]="'/about'">who I am</a> rather than which technologies I happen to be using.</p>
+  <p>This time around I'll focus on <b>who I am</b> rather than which technologies I happen to be using.</p>
   <blockquote>
     You can click on the <span class="hidden_sunny">moon</span><span class="hidden_dark">sun</span>
   </blockquote>
