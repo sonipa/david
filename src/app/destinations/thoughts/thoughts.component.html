@@ -1,14 +1,14 @@
 <section class="container">
   <h1>Old Libraries</h1>
   <h6><b>Saturday</b> June 9th 2018 at 11:59pm</h6>
-  <p>The last time I made this site, I used a template and focused on <u (click)="openFrameworks();" matTooltip="What?" [matTooltipPosition]="'below'">libraries</u> I was using. Before that, this site was about projects.</p>
+  <p>The last time I made this site, I used a template. I focused on <u (click)="openFrameworks();" matTooltip="What?" [matTooltipPosition]="'below'">libraries &amp; frameworks</u> I was using. Before that, this site was about projects.</p>
 </section>
 <section class="container-full">
   <mat-grid-list cols="3" rowHeight="5:4" gutterSize="4">
     <mat-grid-tile (click)="showOverlay('old-sites', '2012', 'Six years ago I was focused on development.')" class="view-larger-link" matTooltip="2012" [matTooltipPosition]="'before'">
       <img src="/assets/photos/old-sites/two-one-thumb.jpg" class="thumbnail-image" />
     </mat-grid-tile>
-    <mat-grid-tile class="view-larger-link" matTooltip="2001-2011" [matTooltipPosition]="'above'">
+    <mat-grid-tile (click)="showOverlay('old-sites-one', '2001-2011', 'Making sites in the early internet.')"  class="view-larger-link" matTooltip="2001-2011" [matTooltipPosition]="'above'">
       <img src="/assets/photos/old-sites/cloud-thumb.png" class="thumbnail-image" />
     </mat-grid-tile>
     <mat-grid-tile (click)="showOverlay('old-sites-zero', '1999', 'Here are some screenshots of version <b>one</b> of this site.')" class="view-larger-link" matTooltip="1999" [matTooltipPosition]="'above'">

@@ -33,6 +33,7 @@ import { IncorporatedComponent } from './notes/incorporated/incorporated.compone
 import { SnowDayComponent } from './overlays/snow-day/snow-day.component';
 import { OldSitesComponent } from './overlays/old-sites/old-sites.component';
 import { OldSitesZeroComponent } from './overlays/old-sites-zero/old-sites-zero.component';
+import { OldSitesOneComponent } from './overlays/old-sites-one/old-sites-one.component';
 import { IntoTheSunComponent } from './overlays/into-the-sun/into-the-sun.component';
 import { PlaceChandlerComponent } from './overlays/place-chandler/place-chandler.component';
 import { PlaceEstesComponent } from './overlays/place-estes/place-estes.component';
@@ -70,8 +71,7 @@ const appRoutes: Routes = [
     SophiaComponent, NoelleComponent, IncorporatedComponent,
 
     SnowDayComponent,
-    OldSitesComponent,
-    OldSitesZeroComponent,
+    OldSitesComponent, OldSitesZeroComponent, OldSitesOneComponent,
     IntoTheSunComponent,
     PlaceChandlerComponent, PlaceEstesComponent, PlaceKetchikanComponent
   ],
