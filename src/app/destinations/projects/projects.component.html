@@ -4,15 +4,12 @@
   <p>This is my children's book about a guy who makes a rocket ship and flies into the sun. Take into consideration that I lived in the middle of the desert when I made this.</p>
 </section>
 <section class="container-full">
-  <mat-grid-list cols="3" rowHeight="1:1" gutterSize="4" (click)="showOverlay('into-the-sun', 'Into the Sun', 'Still working on this one..')" class="view-larger-link" matTooltip="View" [matTooltipPosition]="'before'">
-    <mat-grid-tile>
-      <img src="/assets/photos/into-sun/thumb-1.gif" class="thumbnail-image" />
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <img src="/assets/photos/into-sun/thumb-2.gif" class="thumbnail-image" />
-    </mat-grid-tile>
+  <mat-grid-list cols="3" rowHeight="1:1" gutterSize="0" (click)="showOverlay('into-the-sun', 'Into the Sun', 'Still working on this one..')" class="view-larger-link" matTooltip="View" [matTooltipPosition]="'before'">
     <mat-grid-tile>
       <img src="/assets/photos/into-sun/thumb-3.gif" class="thumbnail-image" />
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2">
+      <img src="/assets/photos/into-sun/page-11.gif" class="thumbnail-image" />
     </mat-grid-tile>
   </mat-grid-list>
 </section>

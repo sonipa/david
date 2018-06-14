@@ -3,6 +3,15 @@
 @import "~devicon/devicon-colors.css";
 @import 'lora'; // The Font
 @import 'icons'; // Material Icons
+/* latin */
+@font-face {
+  font-family: 'Delius';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Delius-Regular'), url(/assets/fonts/delius.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 
 @import './variables';
 
@@ -353,6 +362,14 @@ padding:4px 0px;
   max-width:70vw;
   padding:10px 0px 10px 23px;
 }
+.overlay-ul {
+  padding:8px 0px 8px 43px;
+}
+.overlay-li {
+  padding:2px 0px;
+}
+
+
 .overlay-close {
 font-size:1rem;
 position: absolute;
@@ -367,8 +384,12 @@ cursor: pointer;
 .dptxt {
 position:absolute;
 font-size:1.4rem;
-font-weight: 700;
 color:#fff;
+font-family: 'Delius', 'Lora', serif;
+text-shadow: 0px 1px 0 #439CFF, 0px 2px 0 darken(#439CFF,20%)
+}
+.dptxt-brown {
+text-shadow: 0px 1px 0 #9C8244, 0px 2px 0 darken(#9C8244,20%)
 }
 
 .the-seperator {

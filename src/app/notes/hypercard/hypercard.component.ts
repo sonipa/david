@@ -7,7 +7,6 @@ import { MatBottomSheetRef } from '@angular/material';
 })
 export class HypercardComponent {
   constructor(private bottomSheetRef: MatBottomSheetRef<HypercardComponent>) {}
-
   openLink(event: MouseEvent): void {
     this.bottomSheetRef.dismiss();
     event.preventDefault();

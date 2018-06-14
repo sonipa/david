@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
-
+import { MatBottomSheet } from '@angular/material';
 import { ParentChildService } from './../../services/parent-child.service';
-
-import { ChangeLogComponent } from './../../notes/change-log/change-log.component';
+import { FrameworksComponent } from './../../notes/frameworks/frameworks.component';
 
 @Component({
   selector: 'app-thoughts',
@@ -19,7 +17,7 @@ export class ThoughtsComponent {
     this.parentChildService.targetDetails = targetME;
     this.parentChildService.publish('call-parent');
   }
-  openChangeLog(): void {
-    this.bottomSheet.open(ChangeLogComponent);
+  openFrameworks(): void {
+    this.bottomSheet.open(FrameworksComponent);
   }
 }
