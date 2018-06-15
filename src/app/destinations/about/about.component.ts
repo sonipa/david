@@ -6,11 +6,6 @@ import { SophiaComponent } from './../../notes/sophia/sophia.component';
 import { NoelleComponent } from './../../notes/noelle/noelle.component';
 import { IncorporatedComponent } from './../../notes/incorporated/incorporated.component';
 
-import { PlaceEstesComponent } from '../../overlays/place-estes/place-estes.component';
-import { PlaceKetchikanComponent } from '../../overlays/place-ketchikan/place-ketchikan.component';
-import { PlaceChandlerComponent } from './../../overlays/place-chandler/place-chandler.component';
-
-
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html'

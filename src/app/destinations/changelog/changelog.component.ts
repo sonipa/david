@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
+import { MatBottomSheet } from '@angular/material';
 import { HypercardComponent } from './../../notes/hypercard/hypercard.component';
 import { BBSComponent } from './../../notes/bbs/bbs.component';
 import { FrameworksComponent } from './../../notes/frameworks/frameworks.component';

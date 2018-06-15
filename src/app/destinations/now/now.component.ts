@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
-
 import { ParentChildService } from './../../services/parent-child.service';
-
 import { ChangeLogComponent } from './../../notes/change-log/change-log.component';
 
 @Component({

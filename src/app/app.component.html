@@ -18,7 +18,6 @@
       <app-place-ketchikan *ngSwitchCase="'place-ketchikan'"></app-place-ketchikan>
       <app-snow-day *ngSwitchCase="'snow-day'"></app-snow-day>
     </div>
-    <div class="page-end"></div>
   </mat-drawer>
   <mat-drawer-content role="main" #matDrawerContent id="theMainContent">
     <div class="sun no-select" (click)="toggleDark()" [ngSwitch]="currentWeather" id="theSun">
