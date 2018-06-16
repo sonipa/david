@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 import { ParentChildService } from './../../services/parent-child.service';
+
+import { SophiaComponent } from './../../notes/sophia/sophia.component';
+import { NoelleComponent } from './../../notes/noelle/noelle.component';
+import { IncorporatedComponent } from './../../notes/incorporated/incorporated.component';
 
 @Component({
   selector: 'app-about',
@@ -7,11 +12,20 @@ import { ParentChildService } from './../../services/parent-child.service';
 })
 export class AboutComponent {
   title = 'about';
-  constructor(private parentChildService: ParentChildService) {}
+  constructor(private bottomSheet: MatBottomSheet, private parentChildService: ParentChildService) {}
   showOverlay(targetZ: string, targetL: string, targetME: string) {
     this.parentChildService.targetTemplateName = targetZ;
     this.parentChildService.targetOverlayTitle = targetL;
     this.parentChildService.targetDetails = targetME;
     this.parentChildService.publish('call-parent');
+  }
+  openSophia(): void {
+    this.bottomSheet.open(SophiaComponent);
+  }
+  openNoelle(): void {
+    this.bottomSheet.open(NoelleComponent);
+  }
+  openIncorporated(): void {
+    this.bottomSheet.open(IncorporatedComponent);
   }
 }

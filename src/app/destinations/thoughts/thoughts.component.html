@@ -1,24 +1,26 @@
-<!-- First Post -->
 <section class="container">
   <h1>Old Libraries</h1>
-  <h6><b>Saturday</b> June 9th, 2018 at 11:59 PM</h6>
-  <p>The last time I did this site, I used a template and talked about jQuery way too much. It was 2012.</p>
+  <h6><b>Saturday</b> June 9th 2018 at 11:59pm</h6>
+  <p>The last time I made this site, I used a template. I focused on the <u (click)="openFrameworks();" matTooltip="What?" [matTooltipPosition]="'below'">libraries</u> I was using. Before that, this site was about projects.</p>
 </section>
 <section class="container-full">
   <mat-grid-list cols="3" rowHeight="5:4" gutterSize="4">
-    <mat-grid-tile (click)="showOverlay('old-sites', '2012', 'Six years ago I was focused on development.')" class="view-larger-link" matTooltip="See More" [matTooltipPosition]="'before'">
+    <mat-grid-tile (click)="showOverlay('old-sites', '2012', 'Six years ago I was focused on development.')" class="view-larger-link" matTooltip="2012" [matTooltipPosition]="'before'">
       <img src="/assets/photos/old-sites/two-one-thumb.jpg" class="thumbnail-image" />
     </mat-grid-tile>
-    <mat-grid-tile></mat-grid-tile>
-    <mat-grid-tile (click)="showOverlay('old-sites-zero', '1999', 'Here are some screenshots of version one of this site.')" class="view-larger-link" matTooltip="See More" [matTooltipPosition]="'above'">
+    <mat-grid-tile (click)="showOverlay('old-sites-one', '2001-2011', 'Making sites in the early internet.')"  class="view-larger-link" matTooltip="2001-2011" [matTooltipPosition]="'above'">
+      <img src="/assets/photos/old-sites/cloud-thumb.png" class="thumbnail-image" />
+    </mat-grid-tile>
+    <mat-grid-tile (click)="showOverlay('old-sites-zero', '1999', 'Here are some screenshots of version <b>one</b> of this site.')" class="view-larger-link" matTooltip="1999" [matTooltipPosition]="'above'">
       <img src="/assets/photos/old-sites/zero-thumb.png" class="thumbnail-image" />
     </mat-grid-tile>
   </mat-grid-list>
 </section>
 <section class="container">
-  <p>Technologies fall in and out of favour. This time around I'll focus on <b>who I am</b> rather than which libraries I'm using.</p>
+  <p>This time around I'll focus on <b>who I am</b> rather than which technologies I happen to be using.</p>
   <blockquote>
     You can click on the <span class="hidden_sunny">moon</span><span class="hidden_dark">sun</span>
   </blockquote>
 </section>
+
 <div class="page-end"></div>

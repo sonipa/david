@@ -9,9 +9,14 @@
       <div class="measureman"></div>
     </div>
     <div [ngSwitch]="templateName">
-      <app-snow-day *ngSwitchCase="'snow-day'"></app-snow-day>
+      <app-into-the-sun *ngSwitchCase="'into-the-sun'"></app-into-the-sun>
       <app-old-sites *ngSwitchCase="'old-sites'"></app-old-sites>
+      <app-old-sites-one *ngSwitchCase="'old-sites-one'"></app-old-sites-one>
       <app-old-sites-zero *ngSwitchCase="'old-sites-zero'"></app-old-sites-zero>
+      <app-place-chandler *ngSwitchCase="'place-chandler'"></app-place-chandler>
+      <app-place-estes *ngSwitchCase="'place-estes'"></app-place-estes>
+      <app-place-ketchikan *ngSwitchCase="'place-ketchikan'"></app-place-ketchikan>
+      <app-snow-day *ngSwitchCase="'snow-day'"></app-snow-day>
     </div>
   </mat-drawer>
   <mat-drawer-content role="main" #matDrawerContent id="theMainContent">
@@ -25,12 +30,10 @@
       <a [routerLink]="['/thoughts']" routerLinkActive="this">Thoughts</a><br>
       <a [routerLink]="['/projects']" routerLinkActive="this">Projects</a><br>
       <a [routerLink]="['/changelog']" routerLinkActive="this">Changelog</a><br>
-      <a [routerLink]="['/features']" routerLinkActive="this">Features</a><br>
       <a [routerLink]="['/about']" routerLinkActive="this">About</a>
     </div>
     <div class="copyright">&copy; 2018 David Mulhern</div>
     <div style="padding-top:1.5rem;">
-      <div id="top"></div>
       <router-outlet></router-outlet>
     </div>
     <div class="stars no-select">

@@ -1,8 +1,17 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~devicon/devicon.css";
 @import "~devicon/devicon-colors.css";
-@import url(https://fonts.googleapis.com/css?family=Lora:400,400i,700);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import 'lora'; // The Font
+@import 'icons'; // Material Icons
+/* latin */
+@font-face {
+  font-family: 'Delius';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Delius-Regular'), url(/assets/fonts/delius.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 
 @import './variables';
 
@@ -34,7 +43,8 @@
       background: $light-background-color;
   }
 
-  blockquote {
+  blockquote,
+  .dq  {
   border-left:$light-offset-color 0.3rem solid;
   }
   a {
@@ -93,7 +103,7 @@
     background: $dark-background-color;
   }
 
-  blockquote {
+  .dq,blockquote {
   border-left:$dark-offset-color 0.3rem solid;
   }
   a {
@@ -203,20 +213,25 @@ font-weight:700;
 h1 {
 font-size:2.6rem;
 line-height:2.8rem;
-margin:2rem 0 2rem 0;
+margin:2rem 0 1rem 0;
+font-style: italic;
+}
+.thoughts h1 {
+margin-bottom:0;
 }
 h2 {
 font-size:1.6rem;
 line-height:1.9rem;
-margin:3.5rem 0 1.5rem 0;
+margin:3.5rem 0 1rem 0;
 }
 h3 {
 font-size:1.3rem;
 line-height:1.5rem;
-margin:3rem 0 1.3rem 0;
+margin:3rem 0 1rem 0;
 }
 h6 {
 margin:0px;
+margin-bottom:2rem;
 font-size:1rem;
 font-weight: 400;
 }
@@ -233,7 +248,8 @@ margin:1rem 0;
 .dp {
 padding: 8px 20px 8px 20px;
 }
-blockquote {
+blockquote,
+.dq {
 font-size:1.1rem;
 line-height:1.9rem;
 margin:2rem 0.5rem 2rem 2.5rem;
@@ -306,7 +322,6 @@ padding-left:14px;
   a:hover.this {
   text-decoration: none;
   cursor: default;
-  font-style: italic;
   }
 }
 .copyright {
@@ -342,16 +357,35 @@ border-bottom:8px;
 }
 .overlay-title {
 font-size:1.6rem;
-font-style: italic;
 font-weight: 700;
 }
 .overlay-details {
 padding:4px 0px;
 }
-.overlay-p {
-  max-width:70vw;
+.overlay-h1{
+
+  font-size:1.6rem;
+  font-weight: 700;
   padding:10px 0px 10px 23px;
 }
+.overlay-p {
+  max-width:70vw;
+  padding:10px 20px 10px 23px;
+}
+.overlay-ul {
+  padding:8px 0px 8px 43px;
+}
+.overlay-li {
+  padding:2px 0px;
+}
+
+.overlay-quote {
+  max-width:70vw;
+  font-size:1.4rem;
+  padding:20px;
+}
+
+
 .overlay-close {
 font-size:1rem;
 position: absolute;
@@ -363,6 +397,24 @@ cursor: pointer;
 // Utilities and Helpers
 // --------------------------------------------------------------------------------------------
 
+.dptxt {
+position:absolute;
+font-size:1.4rem;
+color:#fff;
+font-family: 'Delius', 'Lora', serif;
+text-shadow: 0px 1px 0 #439CFF, 0px 2px 0 darken(#439CFF,20%)
+}
+.dptxt-brown {
+text-shadow: 0px 1px 0 #9C8244, 0px 2px 0 darken(#9C8244,20%)
+}
+.dptxt-w {
+  text-shadow: none;
+}
+
+.the-seperator {
+height:10vh;
+width:100%;
+}
 .page-end {
 height:180px;
 width:4px;

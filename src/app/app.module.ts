@@ -24,11 +24,20 @@ import { BBSComponent } from './notes/bbs/bbs.component';
 import { ChangeLogComponent } from './notes/change-log/change-log.component';
 import { FrameworksComponent } from './notes/frameworks/frameworks.component';
 import { SaasComponent } from './notes/saas/saas.component';
+import { SophiaComponent } from './notes/sophia/sophia.component';
+import { NoelleComponent } from './notes/noelle/noelle.component';
+import { IncorporatedComponent } from './notes/incorporated/incorporated.component';
+
 
 // Overlays
 import { SnowDayComponent } from './overlays/snow-day/snow-day.component';
 import { OldSitesComponent } from './overlays/old-sites/old-sites.component';
 import { OldSitesZeroComponent } from './overlays/old-sites-zero/old-sites-zero.component';
+import { OldSitesOneComponent } from './overlays/old-sites-one/old-sites-one.component';
+import { IntoTheSunComponent } from './overlays/into-the-sun/into-the-sun.component';
+import { PlaceChandlerComponent } from './overlays/place-chandler/place-chandler.component';
+import { PlaceEstesComponent } from './overlays/place-estes/place-estes.component';
+import { PlaceKetchikanComponent } from './overlays/place-ketchikan/place-ketchikan.component';
 
 const appRoutes: Routes = [
   { path: 'now', component: NowComponent },
@@ -59,16 +68,20 @@ const appRoutes: Routes = [
     ChangeLogComponent,
     FrameworksComponent,
     SaasComponent,
+    SophiaComponent, NoelleComponent, IncorporatedComponent,
+
     SnowDayComponent,
-    OldSitesComponent,
-    OldSitesZeroComponent
+    OldSitesComponent, OldSitesZeroComponent, OldSitesOneComponent,
+    IntoTheSunComponent,
+    PlaceChandlerComponent, PlaceEstesComponent, PlaceKetchikanComponent
   ],
   entryComponents: [
     HypercardComponent,
     BBSComponent,
     ChangeLogComponent,
     FrameworksComponent,
-    SaasComponent
+    SaasComponent,
+    SophiaComponent, NoelleComponent, IncorporatedComponent
   ],
   imports: [
     RouterModule.forRoot(

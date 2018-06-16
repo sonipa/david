@@ -6,9 +6,9 @@ import { Subject } from 'rxjs/Subject';
 export class ParentChildService {
 
   private subjects: Subject<any>[] = [];
-  targetTemplateName = 'z';
-  targetOverlayTitle = 'This Is aee title';
-  targetDetails = 'Und here is desci1ption';
+  targetTemplateName = '';
+  targetOverlayTitle = '';
+  targetDetails = '';
 
   publish(eventName: string) {
     this.subjects[eventName] = this.subjects[eventName] || new Subject();
