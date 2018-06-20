@@ -6,7 +6,8 @@
         <img src="/assets/photos/0221181110a-small.jpg" class="thumbnail-image" />
       </mat-grid-tile>
   </mat-grid-list>
-  <p>I live in Oregon. I was born in Alaska and have lived in
+  <p>I live in Oregon. I was born in
+    <u (click)="showOverlay('place-ketchikan', 'Version 0.0', 'It all started on an island in Alaska.')" class="view-larger-link" matTooltip="Where?" [matTooltipPosition]="'below'" matTooltip="Where?" [matTooltipPosition]="'below'">Ketchikan</u> and have lived in
     <u (click)="showOverlay('place-estes', 'Growing Up', 'My childhood memories take place in Estes Park, Colorado.')" class="view-larger-link" matTooltip="Where?" [matTooltipPosition]="'below'" matTooltip="Where?" [matTooltipPosition]="'below'">Estes Park</u> and
     <u (click)="showOverlay('place-chandler', 'Chandler, Arizona', 'A city nestled between an Indian Reservation and Tempe.')" class="view-larger-link" matTooltip="What's a Chandler?" [matTooltipPosition]="'below'" matTooltip="What's a Chandler?" [matTooltipPosition]="'below'">Chandler</u>.
     There is a good chance we're strangers. That is partially the purpose for this site &mdash; to share content with people who I most likely haven't met.</p>
