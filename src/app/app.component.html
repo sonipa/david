@@ -1,5 +1,5 @@
 <mat-drawer-container #matDrawerContainer class="the-container" (backdropClick)="closeOverlay()">
-  <mat-drawer #matDrawer (keydown.escape)="closeOverlay()" (click)="closeOverlay()" mode="push" role="overlay" id="theDrawer">
+  <mat-drawer #matDrawer (keydown.escape)="closeOverlay()" (click)="closeOverlay()" mode="push" role="overlay" id="theDrawer" position="start">
     <div class="overlay-header">
         <div class="overlay-title">{{overlayTitle}}</div>
         <div class="overlay-details" [innerHTML]="overlayDetails"></div>
@@ -19,6 +19,23 @@
       <app-snow-day *ngSwitchCase="'snow-day'"></app-snow-day>
     </div>
   </mat-drawer>
+  <mat-drawer #timeline position="end">
+    <div class="measureperson_limiter">
+      <div class="measureperson"></div>
+    </div>
+    <div *ngFor="let year of timelineBase; let y = index;" class="tl-base">
+      <div class="tl-year">{{year}}&nbsp;<i>v{{(40-y)*.1 | number}}</i></div>
+      <div class="tl-months">
+        <!-- <div *ngFor="let month of yearMonths; let i = index;" class="tl-month">{{month | slice:0:3}}</div> -->
+        <ng-template  ngFor let-eventItem [ngForOf]="eventItems">
+          <div *ngIf="eventItem.year == year" class="tl-event">
+            <div><b>{{yearMonths[ eventItem.month-1 ]}} {{eventItem.day}}</b> {{eventItem.title}}</div>
+            <div [innerHTML]="eventItem.details"></div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </mat-drawer>
   <mat-drawer-content role="main" #matDrawerContent id="theMainContent">
     <div class="sun no-select" (click)="toggleDark()" [ngSwitch]="currentWeather" id="theSun">
       <mat-icon *ngSwitchCase="'dark'" matTooltip="Turn on the lights." [matTooltipPosition]="'before'">brightness_3</mat-icon>
@@ -30,7 +47,8 @@
       <a [routerLink]="['/thoughts']" routerLinkActive="this">Thoughts</a><br>
       <a [routerLink]="['/projects']" routerLinkActive="this">Projects</a><br>
       <a [routerLink]="['/changelog']" routerLinkActive="this">Changelog</a><br>
-      <a [routerLink]="['/about']" routerLinkActive="this">About</a>
+      <a [routerLink]="['/about']" routerLinkActive="this">About</a><br><br><br>
+      <a (click)="openTimeline()">Timeline</a>
     </div>
     <div class="copyright">&copy; 2018 David Mulhern</div>
     <div style="padding-top:1.5rem;">

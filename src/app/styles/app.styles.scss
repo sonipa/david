@@ -338,6 +338,44 @@ font-size:0.7rem;
 cursor:pointer;
 }
 
+// Timeline Panel
+// --------------------------------------------------------------------------------------------
+.measureperson_limiter {
+max-width: 700px;
+overflow: hidden;
+height:1px;
+}
+.measureperson {
+width:30vw;
+height:1px;
+}
+
+.tl-base {
+padding:5px;
+font-size:1rem;
+line-height:1rem;
+}
+  .tl-year {
+  padding:5px;
+  font-size:1.2rem;
+  }
+    .tl-year i {
+    opacity: 0.7;
+    font-size:0.9rem;
+    }
+  .tl-months {
+  padding:5px;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  }
+    .tl-month {
+     font-style: italic;
+    }
+  .tl-event {
+  max-width:30vw;
+  padding-left:20px;
+  }
+
 // Overlay Panel
 // --------------------------------------------------------------------------------------------
 
