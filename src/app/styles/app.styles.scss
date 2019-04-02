@@ -305,7 +305,7 @@ right: 34px;
 
 .menu {
 position: fixed;
-top: 110px;
+top: 14px;
 width:7rem;
 font-size:1.3rem;
 line-height:2.4rem;
@@ -505,4 +505,27 @@ top:0;
 .thumbnail-image {
   width: 100%;
   height: 100%;
+}
+
+// Life View
+.life {
+  padding-bottom:80px;
+  .life-key {
+    ul {
+      list-style: none;
+      padding-left:30px;
+      .mat-icon {
+        margin-right:10px;
+      }
+      line-height: 2.4em;
+    }
+  }
+}
+
+
+
+
+
+.mat-divider {
+  margin: 20px 0px 40px 0px !important;
 }

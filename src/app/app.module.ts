@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBottomSheetModule, MatButtonModule, MatExpansionModule, MatIconModule,
-  MatListModule, MatDividerModule, MatTooltipModule, MatGridListModule, MatSidenavModule } from '@angular/material';
+  MatListModule, MatDividerModule, MatTooltipModule, MatGridListModule, MatSidenavModule,
+  MatChipsModule, MatRippleModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
@@ -10,13 +11,10 @@ import { ParentChildService } from './services/parent-child.service';
 
 // Routes
 import { RouterModule, Routes } from '@angular/router';
-import { NowComponent } from './destinations/now/now.component';
 import { ChangelogComponent } from './destinations/changelog/changelog.component';
-import { FeaturesComponent } from './destinations/features/features.component';
 import { LostComponent } from './destinations/lost/lost.component';
 import { ThoughtsComponent } from './destinations/thoughts/thoughts.component';
 import { ProjectsComponent } from './destinations/projects/projects.component';
-import { AboutComponent } from './destinations/about/about.component';
 
 // Notes
 import { HypercardComponent } from './notes/hypercard/hypercard.component';
@@ -24,6 +22,7 @@ import { BBSComponent } from './notes/bbs/bbs.component';
 import { ChangeLogComponent } from './notes/change-log/change-log.component';
 import { FrameworksComponent } from './notes/frameworks/frameworks.component';
 import { SaasComponent } from './notes/saas/saas.component';
+import { SherlockComponent } from './notes/sherlock/sherlock.component';
 import { SophiaComponent } from './notes/sophia/sophia.component';
 import { NoelleComponent } from './notes/noelle/noelle.component';
 import { IncorporatedComponent } from './notes/incorporated/incorporated.component';
@@ -40,14 +39,11 @@ import { PlaceEstesComponent } from './overlays/place-estes/place-estes.componen
 import { PlaceKetchikanComponent } from './overlays/place-ketchikan/place-ketchikan.component';
 
 const appRoutes: Routes = [
-  { path: 'now', component: NowComponent },
-  { path: 'changelog', component: ChangelogComponent },
-  { path: 'features', component: FeaturesComponent },
   { path: 'thoughts', component: ThoughtsComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'changelog', component: ChangelogComponent },
   { path: '',
-    redirectTo: '/now',
+    redirectTo: '/thoughts',
     pathMatch: 'full'
   },
   { path: '**', component: LostComponent }
@@ -56,19 +52,16 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NowComponent,
     ChangelogComponent,
-    FeaturesComponent,
     LostComponent,
     HypercardComponent,
     BBSComponent,
     ThoughtsComponent,
     ProjectsComponent,
-    AboutComponent,
     ChangeLogComponent,
     FrameworksComponent,
     SaasComponent,
-    SophiaComponent, NoelleComponent, IncorporatedComponent,
+    SophiaComponent, SherlockComponent, NoelleComponent, IncorporatedComponent,
 
     SnowDayComponent,
     OldSitesComponent, OldSitesZeroComponent, OldSitesOneComponent,
@@ -81,7 +74,7 @@ const appRoutes: Routes = [
     ChangeLogComponent,
     FrameworksComponent,
     SaasComponent,
-    SophiaComponent, NoelleComponent, IncorporatedComponent
+    SophiaComponent, SherlockComponent, NoelleComponent, IncorporatedComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -99,8 +92,10 @@ const appRoutes: Routes = [
     MatListModule,
     MatDividerModule,
     MatTooltipModule,
+    MatChipsModule,
     MatGridListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatRippleModule
   ],
   providers: [ParentChildService],
   bootstrap: [AppComponent]

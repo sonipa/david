@@ -12,7 +12,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @ViewChild('matDrawer') matDrawer: MatSidenav;
-  @ViewChild('timeline') theTimeline: MatSidenav;
+  // @ViewChild('timeline') theTimeline: MatSidenav;
 
   subscription;
   routeChangeListen;
@@ -130,6 +130,6 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     this.thisSun.style.display = 'block';
   }
   openTimeline() {
-    this.theTimeline.open();
+    // this.theTimeline.open();
   }
 }
