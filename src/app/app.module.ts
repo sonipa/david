@@ -15,6 +15,7 @@ import { ChangelogComponent } from './destinations/changelog/changelog.component
 import { LostComponent } from './destinations/lost/lost.component';
 import { ThoughtsComponent } from './destinations/thoughts/thoughts.component';
 import { ProjectsComponent } from './destinations/projects/projects.component';
+import { GriegosComponent } from './destinations/griegos/griegos.component';
 
 // Notes
 import { HypercardComponent } from './notes/hypercard/hypercard.component';
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
   { path: 'thoughts', component: ThoughtsComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'changelog', component: ChangelogComponent },
+  { path: 'griegos', component: GriegosComponent },
   { path: '',
     redirectTo: '/thoughts',
     pathMatch: 'full'
@@ -57,7 +59,7 @@ const appRoutes: Routes = [
     HypercardComponent,
     BBSComponent,
     ThoughtsComponent,
-    ProjectsComponent,
+    ProjectsComponent, GriegosComponent,
     ChangeLogComponent,
     FrameworksComponent,
     SaasComponent,

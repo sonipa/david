@@ -1,14 +1,48 @@
 <section class="container life">
-  <h1>Life</h1>
+  <h1>Timeline</h1>
   <p>The story so far.</p>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header><mat-icon>vpn_key</mat-icon></mat-expansion-panel-header>
+    <div class="life-key">
+        <ul>
+            <li><mat-icon>fiber_new</mat-icon> Learned Something</li>
+            <li><mat-icon>trending_up</mat-icon> Improvement</li>
+            <li><mat-icon>trending_down</mat-icon> Set Back</li>
+            <li><mat-icon>done</mat-icon> Project</li>
+            <li><mat-icon>local_shipping</mat-icon> Moved</li>
+          </ul>
+      </div>
+  </mat-expansion-panel>
   <mat-accordion>
 
-    <mat-expansion-panel>
+    <mat-expansion-panel expanded="true">
       <mat-expansion-panel-header>2019</mat-expansion-panel-header>
       <mat-accordion>
+        <mat-expansion-panel expanded="true">
+          <mat-expansion-panel-header><mat-icon>trending_up</mat-icon> UX Designer/Full-Stack Developer</mat-expansion-panel-header>
+          I communicate ideas to development teams using mock-ups, animation, words, code-snippets and prototypes. I use Angular or React for prototypes and Sketch as my primary design tool. Our architecture team prefers Sass, which is awesome.
+          <mat-grid-list cols="3" rowHeight="5:3" gutterSize="2">
+            <mat-grid-tile>
+              <img src="/assets/img/logos/sketch-1.svg">
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <img src="/assets/img/logos/angular.svg" style="height:80px;">
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <img src="/assets/img/logos/sass.svg" style="height:80px;">
+            </mat-grid-tile>
+          </mat-grid-list>
+          30 years ago, I created my first interactive project. It is still my favorite thing to do on a computer. I now work remotely for a Weld North company.
+        </mat-expansion-panel>
         <mat-expansion-panel>
-          <mat-expansion-panel-header><mat-icon>trending_up</mat-icon> UX Designer/Developer</mat-expansion-panel-header>
-          Doing app design again. I still code sometimes, but mostly do design these days.
+          <mat-expansion-panel-header><mat-icon>fiber_new</mat-icon> Founded Griego's Greek/Mexican Family Restaurant</mat-expansion-panel-header>
+          <mat-grid-list cols="1" rowHeight="816:239" gutterSize="0">
+            <mat-grid-tile>
+              <img src="/assets/img/griegos.png">
+            </mat-grid-tile>
+          </mat-grid-list>
+          Like anything, it started small... in my kitchen. Back then, I only had two customers, Sophia and Noelle. Three days later, it is still my goal to provide flavorful, high quality Mexican/Greek food to at least three people using a cast-iron surface which I am currently obsessed with.
         </mat-expansion-panel>
       </mat-accordion>
     </mat-expansion-panel>
@@ -19,7 +53,13 @@
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header><mat-icon>fiber_new</mat-icon> Learned how to photograph stars</mat-expansion-panel-header>
-          I have always wanted to capture stars without the streak that comes from the earth spinning. I finally learned how to do this.
+          I have always wanted to capture stars without the streak that comes from the earth spinning. I finally learned how to do this.<br><br>
+          I didn't post the picture anywhere - it's just so dark it almost looks like a full black screen. It has been my wallpaper ever since. <a href="/assets/img/stars.jpg" target="_blank">Download Stars Wallpaper</a><br><br>
+          <mat-grid-list cols="1" rowHeight="3840:2553" gutterSize="4">
+            <mat-grid-tile>
+              <img src="/assets/img/stars.jpg">
+            </mat-grid-tile>
+          </mat-grid-list>
         </mat-expansion-panel>
         <mat-expansion-panel>
           <mat-expansion-panel-header><mat-icon>fiber_new</mat-icon> Learned Sketch</mat-expansion-panel-header>
@@ -58,15 +98,15 @@
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header><mat-icon>done</mat-icon> Finished Monarch</mat-expansion-panel-header>
-          After nine months of hard work, an online consumer platform for our curriculum was ready for the public. This product will go on to make millions for our company. I pitched it, prototyped it, worked for months on the starting codebase and schema, then led the team of devs who brought it to production.<br><br>Today, there is an awesome team working on the platform. Luckily, I still get invited to the meetings since I'm on the UX team.
+          After nine months of hard work, an online consumer platform for our curriculum was ready for the public. I prototyped it, worked for months on the starting codebase and schema, then led the team of devs who brought it to production. This product will go on to make millions for the company.
         </mat-expansion-panel>
         <mat-expansion-panel>
-          <mat-expansion-panel-header><mat-icon>fiber_new</mat-icon> MVC, ORM, API</mat-expansion-panel-header>
+          <mat-expansion-panel-header><mat-icon>fiber_new</mat-icon> Language Neutral</mat-expansion-panel-header>
           Frameworks.. Zend, Spring, Symphony, CodeIgnitor - I can now work with whatever is being used. I'm also working with SOAP APIs, ESBs, JAVA, and .NET. It's a Languagepalooza!
         </mat-expansion-panel>
         <mat-expansion-panel>
           <mat-expansion-panel-header><mat-icon>fiber_new</mat-icon> Entity Relationship Diagrams</mat-expansion-panel-header>
-          I so much enjoy creating these. Doing this is fun to me. I really mean that..
+          I so much enjoy creating these. Doing this is fun to me. ERDs are my jam.
         </mat-expansion-panel>
         <mat-expansion-panel>
           <mat-expansion-panel-header><mat-icon>trending_down</mat-icon> Totally not a designer</mat-expansion-panel-header>
@@ -74,6 +114,60 @@
         </mat-expansion-panel>
       </mat-accordion>
     </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>2009 (10 years ago)</mat-expansion-panel-header>
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header><mat-icon>trending_up</mat-icon> Word</mat-expansion-panel-header>
+            Word
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>2003</mat-expansion-panel-header>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header><mat-icon>trending_up</mat-icon> Tried</mat-expansion-panel-header>
+              Hypercard was a program on our old Apple II. With it, I could take artwork and make it interactive.
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-expansion-panel>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>2002</mat-expansion-panel-header>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header><mat-icon>trending_down</mat-icon> Tried</mat-expansion-panel-header>
+              Hypercard was a program on our old Apple II. With it, I could take artwork and make it interactive.
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-expansion-panel>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>2001</mat-expansion-panel-header>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header><mat-icon>trending_up</mat-icon> Tried</mat-expansion-panel-header>
+              Hypercard was a program on our old Apple II. With it, I could take artwork and make it interactive.
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>2000</mat-expansion-panel-header>
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header><mat-icon>trending_up</mat-icon> Tried</mat-expansion-panel-header>
+                Hypercard was a program on my dad's Apple II. With it, I could take artwork and make it interactive.
+              </mat-expansion-panel>
+            </mat-accordion>
+          </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>1999 (20 years ago)</mat-expansion-panel-header>
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header><mat-icon>trending_down</mat-icon> Tried to learn a new language</mat-expansion-panel-header>
+            Hypercard was a program on our old Apple II. With it, I could take artwork and make it interactive.
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-expansion-panel>
     <mat-expansion-panel>
         <mat-expansion-panel-header>1997</mat-expansion-panel-header>
         <mat-accordion>
@@ -102,25 +196,19 @@
           </mat-accordion>
         </mat-expansion-panel>
         <mat-expansion-panel>
-            <mat-expansion-panel-header>1989</mat-expansion-panel-header>
+            <mat-expansion-panel-header>1989 (30 years ago)</mat-expansion-panel-header>
             <mat-accordion>
               <mat-expansion-panel>
                 <mat-expansion-panel-header><mat-icon>fiber_new</mat-icon> Learned Hypercard</mat-expansion-panel-header>
-                Hypercard was a program on our old Apple II. With it, I could take artwork and make it interactive.
+                <div><img src="/assets/img/logos/hypercard.png" style="width:171px;"></div>
+                Hypercard was a program on my dad's Apple II. Hypercard allowe me to make artwork interactive. My passion for interactive design started right then and there.
+                <mat-grid-list cols="1" rowHeight="1671:1711" gutterSize="0">
+                  <mat-grid-tile>
+                    <img src="/assets/img/logos/hypercard2.png">
+                  </mat-grid-tile>
+                </mat-grid-list>
               </mat-expansion-panel>
             </mat-accordion>
           </mat-expansion-panel>
   </mat-accordion>
-  <mat-expansion-panel>
-      <mat-expansion-panel-header><mat-icon>vpn_key</mat-icon></mat-expansion-panel-header>
-      <div class="life-key">
-          <ul>
-              <li><mat-icon>fiber_new</mat-icon> Learned Something</li>
-              <li><mat-icon>trending_up</mat-icon> Improvement</li>
-              <li><mat-icon>trending_down</mat-icon> Set Back</li>
-              <li><mat-icon>done</mat-icon> Finished Project</li>
-              <li><mat-icon>local_shipping</mat-icon> Moved</li>
-            </ul>
-        </div>
-    </mat-expansion-panel>
 </section>
