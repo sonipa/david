@@ -3,6 +3,7 @@
 @import "~devicon/devicon-colors.css";
 @import 'lora'; // The Font
 @import 'icons'; // Material Icons
+
 /* latin */
 @font-face {
   font-family: 'Delius';
@@ -60,7 +61,7 @@
     }
   }
   b {
-  color:$light-bold-color;
+  color:rgb(40, 90, 131);
   }
   .ver a, .ver a:hover {
   color:$light-offset-color;
@@ -214,7 +215,6 @@ h1 {
 font-size:2.6rem;
 line-height:2.8rem;
 margin:2rem 0 0.2rem 0;
-font-style: italic;
 }
 .thoughts h1 {
 margin-bottom:0;
